@@ -25,7 +25,7 @@ Version:	1.0
 }
 .site-header.style3 .header-bottom {
 	position: relative;
-	background:#FF7550;
+	background:#ff5d5e;
 }
 .site-header.style3.sticky .header-bottom {
 	position: fixed;
@@ -261,7 +261,7 @@ Version:	1.0
 	background:none;
 }
 .slicknav_nav li:hover a{
-	background:#FF7550;
+	background:#ff5d5e;
 	color:#fff;
 	padding-left:5px;
 }
@@ -270,7 +270,7 @@ Version:	1.0
 	background:transparent;
 }
 .slicknav_nav li .dropdown li a:hover{
-	color:#FF7550;
+	color:#ff5d5e;
 }
 .slicknav_nav li .slicknav_item{
 	background:transparent;
@@ -282,12 +282,12 @@ Version:	1.0
 	font-weight: 500;
 }
 .slicknav_menu .slicknav_icon-bar {
-	background-color: #FF6600;
+	background-color: #ff5d5e;
 	box-shadow: none;
 	text-shadow: none;
 }
 .slicknav_nav .slicknav_arrow{
-	color:#FF7550;
+	color:#ff5d5e;
 }
 .slicknav_menu .slicknav_icon-bar {
 	display: block;
@@ -410,7 +410,7 @@ Version:	1.0
 	right: 0px;
 }
 .site-header.style3 {
-	background: #FF7550;
+	background: #ff5d5e;
 }
 .site-header.style3 .header-top {
 	text-align: center;

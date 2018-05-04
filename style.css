@@ -107,10 +107,61 @@ Version:	1.0
 	padding-left: 50px;
 	margin-right: 50px;
 }
+.middle-header .single-widget .btn:hover {
+    border-color: transparent;
+    /*background:#ff5d5e;*/
+	color: #fff;
+}
+.middle-header :before{
+	background: #ff5d5e;
+	color: #fff;
+	border-radius:50px;
+}
+.middle-header .single-widget .btn {
+    color: #ff5d5e;
+    font-size: 13px;
+    border-radius: 50px;
+    margin-top: -7px;
+    text-transform: uppercase;
+    border: 2px solid #ff5d5e;
+    background: #fff;
+    border-radius: 50px;
+}
+.middle-header .length .dropdown{
+	z-index: 100;
+}
+.length {
+	display: none;
+}
+.middle-header .nav li a {
+	margin-top: -17px;
+}
+.middle-header .length .dropdown {
+	position: absolute;
+	left: 0;
+	width: 50px;
+	background: #fff;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	top: 0;
+	margin: 0;
+	text-align: left;
+	padding: 5px 15px;
+}
 .site-header .single-widget:last-child{
 	margin-right:0px;
 }
 .site-header .single-widget img{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.site-header .single-widget img:last-child{
 	position:absolute;
 	left:0;
 	top:0;
@@ -139,8 +190,8 @@ Version:	1.0
 }
 .site-header .nav li{
 	position:relative;
-	margin-right: 28px;
-	padding-right: 28px;
+	margin-right: 20px;
+	padding-right: 20px;
 	border-right: 1px solid rgba(255, 255, 255, 0.20);
 }
 .site-header .nav li:last-child{
@@ -454,87 +505,88 @@ Version:	1.0
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 700px;
+	height: 660px;
 }
 .hero-area .hero-inner {
 	text-align: center;
-	margin: 232px 0;
+	margin: 200px 0;
 }
 .hero-area .welcome-text p {
 	color: #fff;
-	font-size: 16px;
+	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: 500;
+	margin-bottom: 10px;
 }
 .hero-area .welcome-text h1 {
 	font-size: 60px;
 	color: #fff;
+	margin-bottom: 30px;
 	text-transform: capitalize;
 }
 /* Search Form */
-.hero-area .trip-search {
-	background: rgba(255, 255, 255, 0.58);
-	padding: 10px;
-	border: 1px solid #A7CCE8;
+.container .trip-search {
+	background: rgba(238, 238, 238, 0.58);
+	border: 1px solid rgba(228, 228, 228, 0.58);
 	border-radius: 5px;
 	text-align: left;
 	margin-top: 65px;
 }
-.hero-area .trip-search .form{
+.container .trip-search .form{
 	line-height:0px;
 }
-.hero-area .form-group {
-	width: 248px;
+.container .form-group {
+	width: 275px;
 	display: inline-block;
-	margin-right: 10px;
 	margin-bottom: 0px;
 }
-.hero-area .form-group:last-child{
+.container .form-group:last-child{
 	margin-right:0px;
 }
-.hero-area .form-group .nice-select {
+.container .form-group .nice-select {
 	margin: 0;
 	height: 50px;
 	line-height: 50px;
 	padding: 0 15px;
-	border-radius: 5px;
+	/*border-radius: 5px;*/
 	border: none;
 	box-shadow: none;
+	background: rgba(238, 238, 238, 0.58);
 	color: #757575;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 }
-.hero-area .form-group .nice-select:hover{
+.container .form-group .nice-select:hover{
 	color:#ff5d5e;
 }
-.hero-area .form-group .nice-select::after {
+.container .form-group .nice-select::after {
 	right: 20px;
 	color: #757575;
 }
-.hero-area .form-group .nice-select img{
+.container .form-group .nice-select img{
 	margin-right:10px;
 }
-.hero-area .form-group .list li{
+.container .form-group .list li{
 	color:#757575;
 }
-.hero-area .form-group .list li.selected{
+.container .form-group .list li.selected{
 	color:#757575;
 	font-weight:400;
 }
-.hero-area .form-group .list li:hover {
+.container .form-group .list li:hover {
 	color:#fff;
 	background: #ff5d5e;
 }
-.hero-area .form-group.duration{
+.container .form-group.duration{
 	width: 180px;
 }
-.hero-area .form-group.button {
+.container .form-group.button {
 	width: 138px;
 	position: relative;
 	height: 50px;
 }
-.hero-area .form-group .btn {
+.container .form-group .btn {
 	display: block;
 	width: 100%;
 	background: #ff5d5e;
@@ -550,8 +602,12 @@ Version:	1.0
 	border: none;
 	border-radius:3px;
 }
-.hero-area .form-group .btn:hover{
+.container .form-group .btn:hover{
 	color:#ff5d5e;
+}
+
+.hero-area .owl-controls {
+	display: none;
 }
 /* Hero Style 2 */
 .hero-area.style2 {
@@ -560,7 +616,7 @@ Version:	1.0
 }
 .hero-area.style2,
 .hero-area.style2 .single-slider{
-	height: 650px;
+	height: 700px;
 }
 .hero-area.style2 .single-slider {
 	background-size: cover;
@@ -606,6 +662,28 @@ Version:	1.0
 .hero-area.style2 .welcome-text .btn.primary:hover:before{
 	transform: scaleX(0);
 }
+.hero-area .btn:hover {
+    border-color: transparent;
+    background:#ff5d5e;
+	color:#fff;
+}
+.hero-area .btn:before{
+	background: #ff5d5e;
+	border-radius:50px;
+}
+.hero-area .btn {
+    color: #ff5d5e;
+    font-size: 13px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    background: #fff;
+    border-radius: 50px;
+    margin-top: 35px;
+}
+.hero-area .welcome-text p h1 p {
+	font-size: 30px;
+} 
 /* Owl Nav */
 .hero-area.style2 .owl-controls{}
 .hero-area.style2 .owl-controls .owl-nav{}
@@ -1128,7 +1206,7 @@ Version:	1.0
    07. Top Destination CSS
 ========================================*/
 .top-destination .title-line h2 span{
-	display:block;
+	display: row;
 }
 /* Destination Nav */
 .top-destination .nav {
