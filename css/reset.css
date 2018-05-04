@@ -192,10 +192,10 @@ th {
 	-webkit-box-shadow:0px 0px 12px rgba(0, 0, 0, 0.16);
 	-moz-box-shadow:0px 0px 12px rgba(0, 0, 0, 0.16);
 	box-shadow:0px 0px 12px rgba(0, 0, 0, 0.16);
-	color: #FF7550;
+	color: #ff5d5e;
 }
 #scrollUp:hover{
-	background:#FF7550;
+	background:#ff5d5e;
 	color:#fff;
 	box-shadow:0px 0px 12px rgba(0, 0, 0, 0.30);
 }
@@ -318,7 +318,7 @@ big {
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 600;
-	background: #FF7550;
+	background: #ff5d5e;
 	border-radius: 3px;
 	position: relative;
 	box-shadow: none;
@@ -332,7 +332,7 @@ big {
 }
 .btn:hover{
 	background:#fff;
-	color:#FF7550;
+	color:#ff5d5e;
 }
 .btn:before{
 	content: "";
