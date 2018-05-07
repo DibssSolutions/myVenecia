@@ -91,35 +91,34 @@
 						<!-- Header Widget -->
 						<div class="header-widget">
 							<!-- Single Widget -->
-							<div class="single-widget">
-								<img src="images/viber-icon.svg" alt="#">
-								<img src="images/call-icon.svg" alt="#">
+							<div class="single-widget left-padd">
+								<img src="images/viber-icon.svg" alt="viber-icon">
+								<img src="images/call-icon.svg" alt="call-icon">
 								<h4>+34 604145 836</h4>
 								<p>Troll Free </p>
 							</div>
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							<div class="single-widget">
-								<img src="images/clock-icon.svg" alt="#">
+								<img src="images/clock-icon.svg" alt="clock-icon">
 								<h4>Mon -Fri: 9:00-19:00</h4>
 								<p>Sunday Closed</p>
 							</div>
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
-							<div class="single-widget">
+							<div class="single-widget mod-padding">
 								<a href="#" class="btn">Заказать звонок</a>
 							</div>
 							<!--/ End Single Widget -->
 							<!-- Length-drop-down -->
-							<ul class="length">
-								<li><a href="#"><img src="images/flag-ru.png" alt="flag-ru"><i class="fa"></i></a>
-									<ul class="dropdown">
-										<li><a href="#"><img src="images/flag-ru.png" alt="flag-ru">RU</a></li>
-										<li><a href="#"><img src="images/flag-es.png" alt="flag-es">ES</a></li>
-										<li><a href="#"><img src="images/flag-en.png" alt="flag-en">EN</a></li>
-									</ul>
-								</li>
-							</ul>
+							<div class="dropdown js-dropdown">
+								<div class="dropdown__trigger js-dropdown-trigger"><img src="images/flag-ru.png" alt="flag-ru"></div>
+								<ul class="dropdown__list js-dropdown-list">
+									<li><a class="dropdown__link" href="#"><img src="images/flag-ru.png" alt="flag-ru">RU</a></li>
+									<li><a class="dropdown__link" href="#"><img src="images/flag-es.png" alt="flag-es">ES</a></li>
+									<li><a class="dropdown__link" href="#"><img src="images/flag-en.png" alt="flag-en">EN</a></li>
+								</ul>
+							</div>
 							<!-- End Length-drop-down -->
 						</div>
 						<!--/ End Header Widget -->
@@ -226,61 +225,184 @@
 				</div> 
 			</div>
 			<div class="row">
-				<!-- Search Form -->
-				<div class="trip-search">
-					<form class="form">
-						<!-- Form Destination -->
-						<div class="form-group">
-							<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/destination-icon.png" alt="#">Страна / город (куда летим)</span>
-								<ul class="list">
-									<li data-value="1" class="option selected ">Destination One</li>
-									<li data-value="2" class="option">Destination Two</li>
-									<li data-value="3" class="option">Destination Three</li>
-								</ul>
+				<div class="col-12">
+					<!-- Search Form -->
+					<div class="search-buttons">
+						<button type="button" class="search-buttons__city-start">Город вылета</button>
+						<button type="button" class="search-buttons__advanced-search active">Расширенный поиск</button>
+					</div>	
+					<div class="trip-search">
+						<form class="form">
+							<!-- Form Destination -->
+							<div class="form-group country">
+								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/map-marker-alt-rgb.svg" alt="#">Страна / город (куда летим)</span>
+									<ul class="list">
+										<li data-value="1" class="option selected ">Destination One</li>
+										<li data-value="2" class="option">Destination Two</li>
+										<li data-value="3" class="option">Destination Three</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<!--/ End Form Destination -->
-						<!-- Form Activities -->
-						<div class="form-group">
-							<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/activities-icon.png" alt="#">Activities</span>
-								<ul class="list">
-									<li data-value="1" class="option selected ">Activities One</li>
-									<li data-value="2" class="option">Activities Two</li>
-									<li data-value="3" class="option">Activities Three</li>
-								</ul>
+							<!--/ End Form Destination -->
+							<!-- Form Duration -->
+							<div class="form-group duration">
+								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/calendar-rgb.svg" alt="calendar">Дата вылета</span>
+									<ul class="list">
+										<li data-value="1" class="option selected ">Duration One</li>
+										<li data-value="2" class="option">Duration Two</li>
+										<li data-value="3" class="option">Duration Three</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<!--/ End Form Activities -->
-						<!-- Form Duration -->
-						<div class="form-group duration">
-							<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/duration-icon.png" alt="#">Duration</span>
-								<ul class="list">
-									<li data-value="1" class="option selected ">Duration One</li>
-									<li data-value="2" class="option">Duration Two</li>
-									<li data-value="3" class="option">Duration Three</li>
-								</ul>
+							<!--/ End Form Duration -->
+							<!-- Form Activities -->
+							<div class="form-group calendar">
+								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/moon-rgb.svg" alt="moon">Кол-во ночей</span>
+									<ul class="list">
+										<li data-value="1" class="option selected ">на 7-10 ночей</li>
+										<li data-value="2" class="option">Activities Two</li>
+										<li data-value="3" class="option">Activities Three</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<!--/ End Form Duration -->
-						<!-- Form Budget -->
-						<div class="form-group">
-							<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/budget-icon.png" alt="#">Budget</span>
-								<ul class="list">
-									<li data-value="1" class="option selected">$300</li>
-									<li data-value="2" class="option">$300</li>
-									<li data-value="3" class="option">$300</li>
-								</ul>
+							<!--/ End Form Activities -->
+							<!-- Form Activities -->
+							<div class="form-group night">
+								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/users-rgb.svg" alt="user">Кол-во взрослых</span>
+									<ul class="list">
+										<li data-value="1" class="option selected ">Activities One</li>
+										<li data-value="2" class="option">Activities Two</li>
+										<li data-value="3" class="option">Activities Three</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<!--/ End Form Budget -->
-						<!-- Form Button -->
-						<div class="form-group button">
-							<button type="submit" class="btn">Search</button>
-						</div>
-						<!--/ End Form Button -->
-					</form>
-				</div>
-				<!--/ End Search Form -->
+							<!--/ End Form Activities -->
+							<!-- Form Budget -->
+							<div class="form-group children">
+								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/child-rgb.svg" alt="children">Кол-во детей</span>
+									<ul class="list">
+										<li data-value="1" class="option selected">$300</li>
+										<li data-value="2" class="option">$300</li>
+										<li data-value="3" class="option">$300</li>
+									</ul>
+								</div>
+							</div>
+							<!--/ End Form Budget -->
+							<!-- Form Button -->
+							<div class="form-group button">
+								<button type="submit" class="btn">Найти</button>
+							</div>
+							<!--/ End Form Button -->
+						</form>
+						<form class="advanced-form">
+							<div class="advanced-form__row">
+								<div class="advanced-form__row-wrap">
+									<p class="advanced-form__title">Категория тура</p>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									Пляжный</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									Экскурсионный тур</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									Авторский тур</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									Медовый месяц</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									Круиз</label>
+								</div>
+								<div class="advanced-form__search-btn form-group button">
+									<button type="submit" class="btn">Расширенный фильтер</button>
+								</div>
+							</div>
+							<div class="advanced-form__row">
+								<div class="advanced-form__row-wrap">
+									<p class="advanced-form__title">Тип тура</p>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									семейный отдых</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									молодежный</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									парам</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									55+</label>
+								</div>
+								<div class="advanced-form__row-wrap">
+									<p class="advanced-form__title">Уровень отеля звезды:</p>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									Любой</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									2</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									3</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									4</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									5</label>
+								</div>
+							</div>
+							<div class="advanced-form__row">
+								<div class="advanced-form__row-wrap">
+									<p class="advanced-form__title">Тип размещения</p>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									семейный</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									дабл</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									индивидуал</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									трипл</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									сьют</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									две раздельные спальни</label>
+								</div>
+								<div class="advanced-form__row-wrap">
+									<p class="advanced-form__title">Питание</p>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									без</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									завтрак</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									полупансион</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									все вкл.</label>
+									<label>
+									<input type="checkbox" class="advanced-form__checkbox">
+									все вкл.</label>
+								</div>
+							</div>	
+							<!-- Form Button -->
+							<div class="advanced-form__search-btn form-group button">
+								<button type="submit" class="btn">Найти</button>
+							</div>
+							<!--/ End Form Button -->
+						</form>
+					</div>
+					<!--/ End Search Form -->
+				</div>	
 			</div>
 			<div class="row">
 				<div class="col-12">
@@ -1085,5 +1207,7 @@
 	<script src="js/gmap.min.js"></script>
 	<!-- Active JS -->
 	<script src="js/active.js"></script>
+
+
 </body>
 </html>
