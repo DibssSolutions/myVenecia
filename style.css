@@ -3261,6 +3261,63 @@ Version:	1.0
 ========================================*/
 
 /*======================================
+  22. Join CSS
+ ========================================*/
+.join {
+	padding: 148px 0 158px;
+	background: url('images/join-bg.png') #ff5d5e no-repeat;
+	background-size: cover;
+ }
+ .join h3{
+ 	color: #ffffff;
+ 	font-size: 38px;
+ 	font-weight: 800;
+ 	text-transform: uppercase;
+ }
+ .join .form {
+ 	text-align: center;
+ }
+ .join .form-in {
+ 	display: inline-block;
+ }
+ .join .form-inner {
+ 	display: flex;
+ }
+ .join .form-gr:not(:last-child) {
+ 	margin-right: 15px;
+ }
+ .join .form-gr input {
+ 	border-radius: 33px;
+ 	border: 2px solid #f8f8f8;
+ 	width: 350px;
+ 	height: 65px;
+ 	background: transparent;
+ 	outline: none;
+ }
+ .join .form-gr input[type="text"],
+ .join .form-gr input[type="email"] {
+ 	padding: 27px 0 27px 30px;
+ }
+ ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: #ffffff;
+ }
+ .join .form-gr button {
+ 	border-radius: 33px;
+ 	border: 1px solid #f8f8f8;
+ 	background-color: #f8f8f8;
+ 	    padding: 24px 0 23px;
+ 	width: 285px;
+ 	color: #ff5d5e;
+ 	font-size: 16px;
+ 	font-weight: 700;
+ 	text-transform: uppercase;
+ }
+ 
+/*======================================
+  End Join CSS
+ ========================================*/
+
+/*======================================
   22. Footer CSS
  ========================================*/
 .footer{
@@ -3271,6 +3328,7 @@ Version:	1.0
 }
 .footer .footer-top {
 	padding: 90px 0 120px;
+	position: relative;
 }
 .footer .single-widget{
 	margin-top:30px;
@@ -3328,6 +3386,91 @@ Version:	1.0
 	font-size: 16px;
 	font-weight: 300;
 }
+.footer .calc {
+	position: absolute;
+	top: 127px;
+	right: 20px;
+	width: 203px;
+	height: 50px;
+	background-color: #ff5d5e;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer .calc p{
+	color: #fff;
+	text-transform: uppercase;
+	padding-left: 20px;
+	/* line-height: 30px; */
+	/* border-left: 1px solid #ff7374; */
+	position: relative;
+}
+.footer .calc p:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+	width: 1px;
+	background: #ff7374;
+}
+.footer .calc i {
+	font-size: 24px;
+	color: #fff;
+	padding-right: 15px;
+	position: relative;
+	/* border-right: 1px solid #ea4445; */
+}
+.footer .calc i:after {
+	content: '';
+	position: absolute;
+	top: -3px;
+	right: 0;
+	height: 30px;
+	width: 1px;
+	background: #ea4445;
+}
+.footer .calc-popap {
+	padding: 27px 25px 37px 26px;
+	width: 263px;
+	box-shadow: 0 10px 21px rgba(0, 0, 0, 0.22);
+	border-radius: 4px;
+	background-color: #ffffff;
+	text-align: center;
+}
+.footer .calc-popap .btn-popap {
+	color: #ffff;
+}
+.footer .calc-popap .popap-calc-head {
+	height: 133px;
+	width: 133px;
+	margin: 0 auto 11px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.footer .calc-popap h3 {
+	color: #293036;
+	font-size: 24px;
+	line-height: 26px;
+	margin-bottom: 13px;
+	font-weight: 600;
+}
+.footer .calc-popap .btn-popap {
+	/* height: 53px; */
+	border-radius: 5px;
+	background-color: #ff5d5e;
+	display: block;
+	padding: 20px 0;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.footer .calc-popap p {
+	color: #787878;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 26px;
+}
 /* Footer Bottom */
 .footer .footer-bottom {
 	border-top: 1px solid #4B4E53;
@@ -3361,7 +3504,7 @@ Version:	1.0
 	font-weight:400;
 }
 .footer .social li:hover a{
-	color:#FF8767;
+	color:#ff5d5e;
 }
 .footer .dev {
 	float: right;
@@ -3370,6 +3513,7 @@ Version:	1.0
 .footer .dev p {
 	color: #c2c2c2;
 	margin-right: 25px;
+	font-weight: 300;
 }
 /* Footer Style 2 */
 .footer.style2 {
