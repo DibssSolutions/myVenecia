@@ -666,7 +666,7 @@ Version:	1.0
 	width: 275px;
 	display: inline-block;
 	margin-bottom: 0px;
-	border: 1px solid rgba(228, 228, 228, 0.58);
+	border: 1px solid rgba(228, 228, 228, 0.57);
 }
 .container .form-group.country {
 	border: 0 0 0 3px;
