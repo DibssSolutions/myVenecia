@@ -32,3 +32,29 @@ function dropDown() {
 }
 
 dropDown();
+
+function callBack() {
+	$(document).ready(function() {
+	$('.middle-header .single-widget .btn').click( function(event){
+		event.preventDefault();
+		$('.call-back__overlay').fadeIn(400,
+		 	function(){
+				$('.call-back') 
+					.css('display', 'block')
+					.animate({opacity: 1, top: '50%'}, 200);
+		});
+	});
+	/* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+	$('.call-back__close-btn, .call-back__overlay').click( function(){
+		$('.call-back')
+			.animate({opacity: 0, top: '45%'}, 200,
+				function(){
+					$(this).css('display', 'none');
+					$('.call-back__overlay').fadeOut(400);
+				}
+			);
+	});
+});
+}
+
+callBack();

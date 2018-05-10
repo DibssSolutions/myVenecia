@@ -8,11 +8,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Title Tag  -->
-    <title>TravelTrek &minus; Travel Agency & Tour Booking HTML5 Template</title>
+	<title>TravelTrek &minus; Travel Agency & Tour Booking HTML5 Template</title>
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 	
 	<!-- StyleSheet -->
     <link rel="stylesheet" href="css/nice-select.css">
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/magnific-popup.min.css">
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/simple-line-icons.css">
     <link rel="stylesheet" href="css/owl-carousel.css">
     <link rel="stylesheet" href="css/slicknav.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -49,7 +51,52 @@
 		</div>
 	</div>
 	<!-- End Preloader -->
-
+	<!-- Start call-back-form -->
+	<div class="call-back">
+		<div class="call-back__form">
+			<div class="call-back__close">
+				<span class="call-back__close-text">Закрыть</span>
+				<button class="call-back__close-btn" type="button">
+					<span class="icon-close color-size"></span>
+				</button>
+			</div>
+			<h5>Форма обратного звонка</h5>
+			<p class="call-back__text">
+				Оставьте свои данные и мы перезвоним
+			<br>
+				Вам в ближайшее время
+			</p>
+			<form action="">
+				<div class="call-back__input-block">
+					<label>
+						<input type="text" class="call-back__input" name="name" required="required">
+						<span class="call-back__placeholder-text required">Ваше имя</span>
+						<span class="icon-user color-size"></span>
+					</label>
+				</div>
+				<div class="call-back__input-block">
+					<label>
+						<input type="text" class="call-back__input" name="phone" required="required">
+						<span class="call-back__placeholder-text required">Ваш телефон</span>
+						<span class="icon-phone color-size"></span>
+					</label>
+				</div>
+				<div class="call-back__input-block">
+					<label>
+						<input type="text" class="call-back__input" name="phone" required="required">
+						<span class="call-back__placeholder-text">Удобное время звонка</span>
+						<span class="icon-clock color-size"></span>
+					</label>
+				</div>
+			</form>
+			<div class="call-back__button">
+				<button type="submit" class="btn">Заказать звонок</button>
+				<span>поля обязательные для заполнения</span>
+			</div>
+		</div>
+	</div>
+	<div class="call-back__overlay"></div>
+	<!-- End call-back-form -->
 	<!-- Header Area -->
 	<header id="site-header" class="site-header">
 		<!-- Start Topbar -->
@@ -91,26 +138,35 @@
 						<!-- Header Widget -->
 						<div class="header-widget">
 							<!-- Single Widget -->
-							<div class="single-widget">
-								<img src="images/location-icon.png" alt="#">
-								<h4>321 St Jeanne Dance, Flans</h4>
-								<p>Bomanias, US</p>
-							</div>
-							<!--/ End Single Widget -->
-							<!-- Single Widget -->
-							<div class="single-widget">
-								<img src="images/call-icon.png" alt="#">
-								<h4>+012 345 678990</h4>
+							<div class="single-widget left-padd">
+								<img src="images/viber-icon.svg" alt="viber-icon">
+								<img src="images/call-icon.svg" alt="call-icon">
+								<h4>+34 604145 836</h4>
 								<p>Troll Free </p>
 							</div>
 							<!--/ End Single Widget -->
 							<!-- Single Widget -->
 							<div class="single-widget">
-								<img src="images/clock-icon.png" alt="#">
+								<img src="images/clock-icon.svg" alt="clock-icon">
 								<h4>Mon -Fri: 9:00-19:00</h4>
 								<p>Sunday Closed</p>
 							</div>
 							<!--/ End Single Widget -->
+							<!-- Single Widget -->
+							<div class="single-widget mod-padding">
+								<a href="#" class="btn">Заказать звонок</a>
+							</div>
+							<!--/ End Single Widget -->
+							<!-- Length-drop-down -->
+							<div class="dropdown js-dropdown">
+								<div class="dropdown__trigger js-dropdown-trigger"><img src="images/flag-ru.png" alt="flag-ru"></div>
+								<ul class="dropdown__list js-dropdown-list">
+									<li><a class="dropdown__link" href="#"><img src="images/flag-ru.png" alt="flag-ru">RU</a></li>
+									<li><a class="dropdown__link" href="#"><img src="images/flag-es.png" alt="flag-es">ES</a></li>
+									<li><a class="dropdown__link" href="#"><img src="images/flag-en.png" alt="flag-en">EN</a></li>
+								</ul>
+							</div>
+							<!-- End Length-drop-down -->
 						</div>
 						<!--/ End Header Widget -->
 					</div>
@@ -127,48 +183,19 @@
 						<div class="main-menu">
 							<nav class="navigation">
 								<ul class="nav menu">
-									<li class="active"><a href="#">Home<i class="fa fa-angle-down"></i></a>
+									<li class="active"><a href="#">Главная<i class="fa"></i></a>
+									</li>
+									<li><a href="#">Экскурсионные туры<i class="fa fa-angle-down"></i></a>
 										<ul class="dropdown">
-											<li><a href="index.html">Homepage</a></li>
-											<li><a href="index2.html">Homepage Slider</a></li>
-											<li><a href="index3.html">Homepage Video</a></li>
-											<li><a href="index4.html">Homepage Animation</a></li>
+											<li><a href="#">Авторские путешествия</a></li>
+											<li><a href="#">Медовый месяц</a></li>
+											<li><a href="#">Круизы</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Trip package<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="trip-3-column.html">Trip Package 3 Column</a></li>
-											<li><a href="trip-4-column.html">Trip Package 4 Column</a></li>
-											<li><a href="trip-single.html">Trip Single</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Services<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="services.html">Services</a></li>
-											<li><a href="service-single.html">Service Single</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Pages<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="destinations.html">Destinations</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="testimonials.html">Testimonials</a></li>
-											<li><a href="faq.html">Faq</a></li>
-											<li><a href="404.html">404 Page</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Blogs<i class="fa fa-angle-down"></i></a>
-										<ul class="dropdown">
-											<li><a href="blog-grid.html">Blog Grid</a></li>
-											<li><a href="blog-grid-sidebar.html">Blog Grid Sidebar</a></li>
-											<li><a href="blog-classic.html">Blog Classic</a></li>
-											<li><a href="blog-grid-sidebar.html">Blog Classic Sidebar</a></li>
-											<li><a href="blog-single.html">Blog Single</a></li>
-											<li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
-										</ul>
-									</li>
-									<li><a href="contact.html">Contact Us</a></li>
+									<li><a href="#">Авторские путешествия<i class="fa"></i></a></li>
+									<li><a href="#">Медовый месяц<i class="fa"></i></a></li>
+									<li><a href="#">Круизы<i class="fa"></i></a></li>
+									<li><a href="contact.html">Направления</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -187,11 +214,11 @@
 			<div class="row">
 				<div class="col-12">
 					<ul class="list">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">Trip Package</a></li>
-						<li><a href="package-3-column">Trip Package 3 column</a></li>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#">Экскурсионные туры</a></li>
+						<li><a href="package-3-column">Treasure of europe</a></li>
 					</ul>
-					<h2>Trip Package Page</h2>
+					<h2>Treasure of europe</h2>
 				</div>
 			</div>
 		</div>
@@ -503,5 +530,7 @@
 	<script src="js/gmap.min.js"></script>
 	<!-- Active JS -->
 	<script src="js/active.js"></script>
+	<!-- Custom JS -->
+	<script src="js/common.js"></script>
 </body>
 </html>

@@ -55,33 +55,46 @@
 		<div class="call-back__form">
 			<div class="call-back__close">
 				<span class="call-back__close-text">Закрыть</span>
-				<button type="button">
+				<button class="call-back__close-btn" type="button">
 					<span class="icon-close color-size"></span>
 				</button>
 			</div>
 			<h5>Форма обратного звонка</h5>
-			<p>
-				Оставьте свои данные и мы перезвоним Вам в ближайшее время
+			<p class="call-back__text">
+				Оставьте свои данные и мы перезвоним
+			<br>
+				Вам в ближайшее время
 			</p>
 			<form action="">
-				<label for="">
-					<input type="text" placeholder="Ваше имя">
-					<span class="icon-user"></span>
-				</label>
-				<label for="">
-					<input type="text" placeholder="Ваш телефон">
-					<span class="icon-phone"></span>
-				</label>
-				<label for="">
-					<input type="text" placeholder="Удобное время звонка">
-					<span class="icon-clock"></span>
-				</label>
+				<div class="call-back__input-block">
+					<label>
+						<input type="text" class="call-back__input" name="name" required="required">
+						<span class="call-back__placeholder-text required">Ваше имя</span>
+						<span class="icon-user color-size"></span>
+					</label>
+				</div>
+				<div class="call-back__input-block">
+					<label>
+						<input type="text" class="call-back__input" name="phone" required="required">
+						<span class="call-back__placeholder-text required">Ваш телефон</span>
+						<span class="icon-phone color-size"></span>
+					</label>
+				</div>
+				<div class="call-back__input-block">
+					<label>
+						<input type="text" class="call-back__input" name="phone" required="required">
+						<span class="call-back__placeholder-text">Удобное время звонка</span>
+						<span class="icon-clock color-size"></span>
+					</label>
+				</div>
 			</form>
 			<div class="call-back__button">
 				<button type="submit" class="btn">Заказать звонок</button>
+				<span>поля обязательные для заполнения</span>
 			</div>
 		</div>
 	</div>
+	<div class="call-back__overlay"></div>
 	<!-- End call-back-form -->
 	<!-- Header Area -->
 	<header id="site-header" class="site-header">
@@ -250,599 +263,601 @@
 	<!-- Top Destination -->
 	<section id="top-destination" class="top-destination section">
 		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="title-line center">
-						<h2><span>Поиск</span> Тура</h2>
-					</div>
-				</div> 
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<!-- Search Form -->
-					<div class="search-buttons">
-						<button type="button" class="search-buttons__city-start">Город вылета</button>
-						<button type="button" class="search-buttons__advanced-search active">Расширенный поиск</button>
-					</div>	
-					<div class="trip-search">
-						<form class="form">
-							<!-- Form Destination -->
-							<div class="form-group country">
-								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/map-marker-alt-rgb.svg" alt="#">Страна / город (куда летим)</span>
-									<ul class="list">
-										<li data-value="1" class="option selected ">Destination One</li>
-										<li data-value="2" class="option">Destination Two</li>
-										<li data-value="3" class="option">Destination Three</li>
-									</ul>
-								</div>
-							</div>
-							<!--/ End Form Destination -->
-							<!-- Form Duration -->
-							<div class="form-group duration">
-								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/calendar-rgb.svg" alt="calendar">Дата вылета</span>
-									<ul class="list">
-										<li data-value="1" class="option selected ">Duration One</li>
-										<li data-value="2" class="option">Duration Two</li>
-										<li data-value="3" class="option">Duration Three</li>
-									</ul>
-								</div>
-							</div>
-							<!--/ End Form Duration -->
-							<!-- Form Activities -->
-							<div class="form-group calendar">
-								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/moon-rgb.svg" alt="moon">Кол-во ночей</span>
-									<ul class="list">
-										<li data-value="1" class="option selected ">на 7-10 ночей</li>
-										<li data-value="2" class="option">Activities Two</li>
-										<li data-value="3" class="option">Activities Three</li>
-									</ul>
-								</div>
-							</div>
-							<!--/ End Form Activities -->
-							<!-- Form Activities -->
-							<div class="form-group night">
-								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/users-rgb.svg" alt="user">Кол-во взрослых</span>
-									<ul class="list">
-										<li data-value="1" class="option selected ">Activities One</li>
-										<li data-value="2" class="option">Activities Two</li>
-										<li data-value="3" class="option">Activities Three</li>
-									</ul>
-								</div>
-							</div>
-							<!--/ End Form Activities -->
-							<!-- Form Budget -->
-							<div class="form-group children">
-								<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/child-rgb.svg" alt="children">Кол-во детей</span>
-									<ul class="list">
-										<li data-value="1" class="option selected">$30</li>
-										<li data-value="2" class="option">$30</li>
-										<li data-value="3" class="option">$30</li>
-									</ul>
-								</div>
-							</div>
-							<!--/ End Form Budget -->
-							<!-- Form Button -->
-							<div class="form-group button">
-								<button type="submit" class="btn">Найти</button>
-							</div>
-							<!--/ End Form Button -->
-						</form>
-						<form class="advanced-form">
-							<div class="advanced-form__row">
-								<div class="advanced-form__row-wrap">
-									<p class="advanced-form__title">Категория тура</p>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									Пляжный</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									Экскурсионный тур</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									Авторский тур</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									Медовый месяц</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									Круиз</label>
-								</div>
-								<div class="advanced-form__search-btn form-group button">
-									<button type="submit" class="btn">Расширенный фильтер</button>
-								</div>
-							</div>
-							<div class="advanced-form__row">
-								<div class="advanced-form__row-wrap">
-									<p class="advanced-form__title">Тип тура</p>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									семейный отдых</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									молодежный</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									парам</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									55+</label>
-								</div>
-								<div class="advanced-form__row-wrap">
-									<p class="advanced-form__title">Уровень отеля звезды:</p>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									Любой</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									2</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									3</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									4</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									5</label>
-								</div>
-							</div>
-							<div class="advanced-form__row">
-								<div class="advanced-form__row-wrap">
-									<p class="advanced-form__title">Тип размещения</p>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									семейный</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									дабл</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									индивидуал</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									трипл</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									сьют</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									две раздельные спальни</label>
-								</div>
-								<div class="advanced-form__row-wrap">
-									<p class="advanced-form__title">Питание</p>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									без</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									завтрак</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									полупансион</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									все вкл.</label>
-									<label>
-									<input type="checkbox" class="advanced-form__checkbox">
-									все вкл.</label>
-								</div>
-							</div>	
-							<!-- Form Button -->
-							<div class="advanced-form__search-btn form-group button">
-								<button type="submit" class="btn">Найти</button>
-							</div>
-							<!--/ End Form Button -->
-						</form>
-					</div>
-					<!--/ End Search Form -->
-				</div>	
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<!-- Destination Tab -->
-					<div class="destination-inner">
-						<!-- Nav Tab  -->                                       
-						<ul class="nav nav-tabs" id="myTab" role="tablist">
-							<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#t-tab1" role="tab">East Europe</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab2" role="tab">West Europe</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab3" role="tab">Caribbean & Mexico</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab4" role="tab">America & Cananda</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab5" role="tab">Euroasia</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab6" role="tab">Russia</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab7" role="tab">Elsewhere</a></li>
-						</ul>
-						<!--/ End Nav Tab -->
-						<div class="tab-content" id="myTabContent">
-							<!-- Tab 1 -->
-							<div class="tab-pane fade show active" id="t-tab1" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<div class="trip-offer">30% OFF</div>
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
-													<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$300</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$500</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$400</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$100</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$400</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$450</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 1 -->
-							<!-- Tab 2 -->
-							<div class="tab-pane fade" id="t-tab2" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<div class="trip-offer">30% OFF</div>
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
-													<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$300</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$500</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$400</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 2 -->
-							<!-- Tab 3 -->
-							<div class="tab-pane fade" id="t-tab3" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$100</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$400</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 3 -->
-							<!-- Tab 4 -->
-							<div class="tab-pane fade" id="t-tab4" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$450</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$400</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 4 -->
-							<!-- Tab 5 -->
-							<div class="tab-pane fade" id="t-tab5" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<div class="trip-offer">30% OFF</div>
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
-													<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$300</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$500</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 5 -->
-							<!-- Tab 6 -->
-							<div class="tab-pane fade" id="t-tab6" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$500</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
-													<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$400</span></p>
-												</div>
-												<a href="trip-single.html" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 6 -->
-							<!-- Tab 7 -->
-							<div class="tab-pane fade" id="t-tab7" role="tabpanel">
-								<div class="row">
-									<div class="col-lg-4 col-md-6 col-12">
-										<!-- Single Tab -->
-										<div class="single-package">
-											<div class="trip-head">
-												<img src="http://via.placeholder.com/344x230" alt="#">
-											</div>
-											<div class="trip-details">
-												<div class="left">
-													<h4><a href="#">Snorkel Tour in Grand Turks Coral Reef</a></h4>
-													<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
-												</div>
-												<div class="right">
-													<p>From<span>$300</span></p>
-												</div>
-												<a href="#" class="btn primary">View More</a>
-											</div>
-										</div>
-										<!--/ End Single Tab -->
-									</div>
-								</div>
-							</div>
-							<!--/ End Tab 7 -->
+			<div class="dastination__wrap">
+				<div class="row">
+					<div class="col-12">
+						<div class="title-line center">
+							<h2><span>Поиск</span> Тура</h2>
 						</div>
+					</div> 
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<!-- Search Form -->
+						<div class="search-buttons">
+							<button type="button" class="search-buttons__city-start">Город вылета</button>
+							<button type="button" class="search-buttons__advanced-search active">Расширенный поиск</button>
+						</div>	
+						<div class="trip-search">
+							<form class="form">
+								<!-- Form Destination -->
+								<div class="form-group country">
+									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/map-marker-alt-rgb.svg" alt="#">Страна / город (куда летим)</span>
+										<ul class="list">
+											<li data-value="1" class="option selected ">Destination One</li>
+											<li data-value="2" class="option">Destination Two</li>
+											<li data-value="3" class="option">Destination Three</li>
+										</ul>
+									</div>
+								</div>
+								<!--/ End Form Destination -->
+								<!-- Form Duration -->
+								<div class="form-group duration">
+									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/calendar-rgb.svg" alt="calendar">Дата вылета</span>
+										<ul class="list">
+											<li data-value="1" class="option selected ">Duration One</li>
+											<li data-value="2" class="option">Duration Two</li>
+											<li data-value="3" class="option">Duration Three</li>
+										</ul>
+									</div>
+								</div>
+								<!--/ End Form Duration -->
+								<!-- Form Activities -->
+								<div class="form-group calendar">
+									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/moon-rgb.svg" alt="moon">Кол-во ночей</span>
+										<ul class="list">
+											<li data-value="1" class="option selected ">на 7-10 ночей</li>
+											<li data-value="2" class="option">Activities Two</li>
+											<li data-value="3" class="option">Activities Three</li>
+										</ul>
+									</div>
+								</div>
+								<!--/ End Form Activities -->
+								<!-- Form Activities -->
+								<div class="form-group night">
+									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/users-rgb.svg" alt="user">Кол-во взрослых</span>
+										<ul class="list">
+											<li data-value="1" class="option selected ">Activities One</li>
+											<li data-value="2" class="option">Activities Two</li>
+											<li data-value="3" class="option">Activities Three</li>
+										</ul>
+									</div>
+								</div>
+								<!--/ End Form Activities -->
+								<!-- Form Budget -->
+								<div class="form-group children">
+									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/child-rgb.svg" alt="children">Кол-во детей</span>
+										<ul class="list">
+											<li data-value="1" class="option selected">$30</li>
+											<li data-value="2" class="option">$30</li>
+											<li data-value="3" class="option">$30</li>
+										</ul>
+									</div>
+								</div>
+								<!--/ End Form Budget -->
+								<!-- Form Button -->
+								<div class="form-group button">
+									<button type="submit" class="btn">Найти</button>
+								</div>
+								<!--/ End Form Button -->
+							</form>
+							<form class="advanced-form">
+								<div class="advanced-form__row">
+									<div class="advanced-form__row-wrap">
+										<p class="advanced-form__title">Категория тура</p>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										Пляжный</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										Экскурсионный тур</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										Авторский тур</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										Медовый месяц</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										Круиз</label>
+									</div>
+									<div class="advanced-form__search-btn form-group button">
+										<button type="submit" class="btn">Расширенный фильтер</button>
+									</div>
+								</div>
+								<div class="advanced-form__row">
+									<div class="advanced-form__row-wrap">
+										<p class="advanced-form__title">Тип тура</p>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										семейный отдых</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										молодежный</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										парам</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										55+</label>
+									</div>
+									<div class="advanced-form__row-wrap">
+										<p class="advanced-form__title">Уровень отеля звезды:</p>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										Любой</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										2</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										3</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										4</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										5</label>
+									</div>
+								</div>
+								<div class="advanced-form__row">
+									<div class="advanced-form__row-wrap">
+										<p class="advanced-form__title">Тип размещения</p>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										семейный</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										дабл</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										индивидуал</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										трипл</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										сьют</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										две раздельные спальни</label>
+									</div>
+									<div class="advanced-form__row-wrap">
+										<p class="advanced-form__title">Питание</p>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										без</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										завтрак</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										полупансион</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										все вкл.</label>
+										<label>
+										<input type="checkbox" class="advanced-form__checkbox">
+										все вкл.</label>
+									</div>
+								</div>	
+								<!-- Form Button -->
+								<div class="advanced-form__search-btn form-group button">
+									<button type="submit" class="btn">Найти</button>
+								</div>
+								<!--/ End Form Button -->
+							</form>
+						</div>
+						<!--/ End Search Form -->
+					</div>	
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<!-- Destination Tab -->
+						<div class="destination-inner">
+							<!-- Nav Tab  -->  
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#t-tab1" role="tab">East Europe</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab2" role="tab">West Europe</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab3" role="tab">Caribbean & Mexico</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab4" role="tab">America & Cananda</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab5" role="tab">Euroasia</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab6" role="tab">Russia</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab7" role="tab">Elsewhere</a></li>
+							</ul>
+							<!--/ End Nav Tab -->
+							<div class="tab-content" id="myTabContent">
+								<!-- Tab 1 -->
+								<div class="tab-pane fade show active" id="t-tab1" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<div class="trip-offer">30% OFF</div>
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
+														<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$300</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$500</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$400</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$100</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$400</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$450</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 1 -->
+								<!-- Tab 2 -->
+								<div class="tab-pane fade" id="t-tab2" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<div class="trip-offer">30% OFF</div>
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
+														<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$300</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$500</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$400</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 2 -->
+								<!-- Tab 3 -->
+								<div class="tab-pane fade" id="t-tab3" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 1 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$100</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$400</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 3 -->
+								<!-- Tab 4 -->
+								<div class="tab-pane fade" id="t-tab4" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$450</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$400</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 4 -->
+								<!-- Tab 5 -->
+								<div class="tab-pane fade" id="t-tab5" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<div class="trip-offer">30% OFF</div>
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Tour package in Greenville, Carolina</a></h4>
+														<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$300</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$500</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 5 -->
+								<!-- Tab 6 -->
+								<div class="tab-pane fade" id="t-tab6" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>4 Nights 5 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$500</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="trip-single.html">Awesome tour package in pattaya</a></h4>
+														<p><i class="fa fa-clock-o"></i>2 Nights 3 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$400</span></p>
+													</div>
+													<a href="trip-single.html" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 6 -->
+								<!-- Tab 7 -->
+								<div class="tab-pane fade" id="t-tab7" role="tabpanel">
+									<div class="row">
+										<div class="col-lg-4 col-md-6 col-12">
+											<!-- Single Tab -->
+											<div class="single-package">
+												<div class="trip-head">
+													<img src="http://via.placeholder.com/344x230" alt="#">
+												</div>
+												<div class="trip-details">
+													<div class="left">
+														<h4><a href="#">Snorkel Tour in Grand Turks Coral Reef</a></h4>
+														<p><i class="fa fa-clock-o"></i>3 Nights 4 Days</p>
+													</div>
+													<div class="right">
+														<p>From<span>$300</span></p>
+													</div>
+													<a href="#" class="btn primary">View More</a>
+												</div>
+											</div>
+											<!--/ End Single Tab -->
+										</div>
+									</div>
+								</div>
+								<!--/ End Tab 7 -->
+							</div>
+						</div>
+						<!--/ End Destination Tab -->
 					</div>
-					<!--/ End Destination Tab -->
 				</div>
 			</div>
 		</div>
@@ -979,71 +994,77 @@
 	</section>
 	<!--/ End Popular Trips -->
 	
-	<!-- Testimonials -->
-	<section id="testimonials" class="testimonials section">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="title-line center">
-						<p>What our guest are saying</p>
-						<h2><span>Clients</span> Experience</h2>
-					</div>  
-				</div> 
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<div class="testimonial-main">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<!-- Testimonial Slider -->
-								<div class="testimonial-slider">
-									<!-- Single Slider -->
-									<div class="single-slider">
-										<h2>Amazng tour in my life!</h2>
-										<p>The average employee is wasting between 50%-80% of their day on non-work related distractions. Time wasted is money wasted, thats money that could stay in your pocket simply by changing the way you assign your tasks.</p>
-										<span>Tony McLaren, Designer, UK</span>
-									</div>
-									<!--/ End Single Slider -->
-									<!-- Single Slider -->
-									<div class="single-slider">
-										<h2>This tour was best!</h2>
-										<p>The average employee is wasting between 50%-80% of their day on non-work related distractions. Time wasted is money wasted, thats money that could stay in your pocket simply by changing the way you assign your tasks.</p>
-										<span>Landon Sarno, Operator, US</span>
-									</div>
-									<!--/ End Single Slider -->
-									<!-- Single Slider -->
-									<div class="single-slider">
-										<h2>Very helpfull and smart tour</h2>
-										<p>The average employee is wasting between 50%-80% of their day on non-work related distractions. Time wasted is money wasted, thats money that could stay in your pocket simply by changing the way you assign your tasks.</p>
-										<span>Sonila, Photographer, NP</span>
-									</div>
-									<!--/ End Single Slider -->
-								</div>
-								<!--/ End Testimonial Slider -->
-							</div>
-							<div class="col-lg-6 col-md-6 col-12">
-								<!-- Testimonial Image -->
-								<div class="testimonial-image">
-									<img src="http://via.placeholder.com/560x400" alt="#">
-								</div>
-								<!--/ End Testimonial Image -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--/ End Testimonials -->
+	
 	
 	<!-- Blog Area -->
 	<section id="blog-area" class="blog-area section">
 		<div class="container">
+			<div class="confidence">
+				<div class="row">
+					<div class="col-12">
+						<div class="title-line center">
+							<h2><span>Почему</span> Нам доверяют</h2>
+						</div>
+					</div>   
+				</div>
+				<div class="confidence-single">
+					<!-- Single Blog -->
+					<div class="single-card">
+						<div class="card-head">
+							<img src="images/specialist.svg" alt="specialist">
+						</div>
+						<div class="card-content">
+							<span>Специалистыс опытом</span>
+						</div>
+					</div>
+					<!--/ End Single Blog -->
+					<!-- Single Blog -->
+					<div class="single-card">
+						<div class="card-head">
+							<img src="images/price.svg" alt="price">
+						</div>
+						<div class="card-content">
+							<span>Цены доступные каждому</span>
+						</div>
+					</div>
+					<!--/ End Single Blog -->
+					<!-- Single Blog -->
+					<div class="single-card">
+						<div class="card-head">
+							<img src="images/support.svg" alt="support">
+						</div>
+						<div class="card-content">
+							<span>Поддержка 24х7</span>
+						</div>
+					</div>
+					<!--/ End Single Blog -->
+					<!-- Single Blog -->
+					<div class="single-card">
+						<div class="card-head">
+							<img src="images/insuranse.svg" alt="insuranse">
+						</div>
+						<div class="card-content">
+							<span>Страхование в подарок</span>
+						</div>
+					</div>
+					<!--/ End Single Blog -->
+					<!-- Single Blog -->
+					<div class="single-card">
+						<div class="card-head">
+							<img src="images/purse.svg" alt="#">
+						</div>
+						<div class="card-content">
+							<span>С нами удобно (оплата любым способом)</span>
+						</div>
+					</div>
+					<!--/ End Single Blog -->
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-12">
 					<div class="title-line center">
-						<p>News & Blog</p>
-						<h2><span>Latest</span> Updates</h2>
+						<p>Our Expert Team</p>
+						<h2>Our <span>Experties</span></h2>
 					</div>
 				</div>   
 			</div>
@@ -1055,9 +1076,13 @@
 							<img src="http://via.placeholder.com/850x550" alt="#">
 						</div>
 						<div class="blog-content">
-							<span>Jan 31 2018</span>
-							<h4><a href="blog-single.html">Spring in the air and the Romantic conola ride in Vinece</a></h4>
-							<a href="blog-single.html" class="btn">Read More</a>
+							<span>Support</span>
+							<h3>Jenife Paoli</h3>
+							<p>
+								Integer varius pharetra laoreet. Fusce nec
+								tortor afficitur, eleifend neque sit amet,
+								commodo dolor Nam iaculis
+							</p>
 						</div>
 					</div>
 					<!--/ End Single Blog -->
@@ -1069,9 +1094,13 @@
 							<img src="http://via.placeholder.com/850x550" alt="#">
 						</div>
 						<div class="blog-content">
-							<span>Jan 31 2018</span>
-							<h4><a href="blog-single.html">Spring in the air and the Romantic conola ride in Vinece</a></h4>
-							<a href="blog-single.html" class="btn">Read More</a>
+							<span>Marketing</span>
+							<h3>John Mathew</h3>
+							<p>
+								Integer varius pharetra laoreet. Fusce nec
+								tortor afficitur, eleifend neque sit amet,
+								commodo dolor Nam iaculis
+							</p>
 						</div>
 					</div>
 					<!--/ End Single Blog -->
@@ -1083,9 +1112,13 @@
 							<img src="http://via.placeholder.com/850x550" alt="#">
 						</div>
 						<div class="blog-content">
-							<span>Jan 31 2018</span>
-							<h4><a href="blog-single.html">Spring in the air and the Romantic conola ride in Vinece</a></h4>
-							<a href="blog-single.html" class="btn">Read More</a>
+							<span>Operator</span>
+							<h3>Tulipa Honey</h3>
+							<p>
+								Integer varius pharetra laoreet. Fusce nec
+								tortor afficitur, eleifend neque sit amet,
+								commodo dolor Nam iaculis
+							</p>
 						</div>
 					</div>
 					<!--/ End Single Blog -->
@@ -1094,6 +1127,97 @@
 		</div>
 	</section>
 	<!--/ End Blog Area -->
+	<!-- Testimonials -->
+	<section id="testimonials" class="testimonials section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="title-line center">
+						<h2><span>Более 2500</span> Довольных клиентов</h2>
+					</div>  
+				</div> 
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="testimonial-main">
+						<div class="row">
+							<div class="col-lg-8 col-md-8 col-12">
+								<!-- Testimonial Slider -->
+								<div class="testimonial-slider">
+									<!-- Single Slider -->
+									<div class="single-slider">
+										<h2>Елена Петрова</h2>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</p>
+										<br>
+										<p>
+											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+										<div class="testimonial-footer">
+											<div class="name-hotel">
+												<span>Пхукет</span>
+												<span>Grand Hotel 5*</span>
+											</div>
+											<span>15.04.2018</span>
+										</div>	
+									</div>
+									<!--/ End Single Slider -->
+									<!-- Single Slider -->
+									<div class="single-slider">
+										<h2>Елена Петрова</h2>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</p>
+										<br>
+										<p>
+											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+										<div class="testimonial-footer">
+											<div class="name-hotel">
+												<span>Пхукет</span>
+												<span>Grand Hotel 5*</span>
+											</div>
+											<span>15.04.2018</span>
+										</div>
+									</div>
+									<!--/ End Single Slider -->
+									<!-- Single Slider -->
+									<div class="single-slider">
+										<h2>Елена Петрова</h2>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</p>
+										<br>
+										<p>
+											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+										<div class="testimonial-footer">
+											<div class="name-hotel">
+												<span>Пхукет</span>
+												<span>Grand Hotel 5*</span>
+											</div>
+											<span>15.04.2018</span>
+										</div>
+									</div>
+									<!--/ End Single Slider -->
+								</div>
+								<!--/ End Testimonial Slider -->
+							</div>
+							<div class="col-lg-4 col-md-4 col-12">
+								<!-- Testimonial Image -->
+								<div class="testimonial-image">
+									<img src="images/selfi.jpg" alt="#">
+								</div>
+								<!--/ End Testimonial Image -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/ End Testimonials -->
 	<!-- begin join -->
 	<div class="join">
 		<div class="container">
