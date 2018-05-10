@@ -32,3 +32,22 @@ function dropDown() {
 }
 
 dropDown();
+
+function openPopap() {
+	var popapOpen = $('.js-popup-step-open');
+	var popapmain = $('.js-popup-main');
+	popapOpen.click(function() {
+		popapmain.addClass('open');
+	})
+};
+openPopap();
+
+function step() {
+	var item = $('.js-item-3');
+	item.click(function() {
+		item.prevAll().addClass('prev');
+		// $('.is-active').addClass('prev');
+		
+	});
+};
+step();

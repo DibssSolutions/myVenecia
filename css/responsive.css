@@ -5,6 +5,26 @@ Author URI: http://ithemer.com/
 Description: Travel Trek is a Tour & Travel Website Templates.
 Version:	1.0
 ========================================*/
+@media only screen and (max-width: 1024px) {
+.form-subscribe__inner {
+	display: block;
+	text-align: center;
+}
+.form-subscribe h3 {
+    font-size: 25px;
+}
+.form-subscribe__group:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+.form-subscribe__group input {
+	width: 100%;
+}
+@media only screen and (max-width: 450px) {
+.form-subscribe h3 {
+    font-size: 18px;
+}
+}
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */
