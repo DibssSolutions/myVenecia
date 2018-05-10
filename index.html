@@ -50,7 +50,39 @@
 		</div>
 	</div>
 	<!-- End Preloader -->
-
+	<!-- Start call-back-form -->
+	<div class="call-back">
+		<div class="call-back__form">
+			<div class="call-back__close">
+				<span class="call-back__close-text">Закрыть</span>
+				<button type="button">
+					<span class="icon-close color-size"></span>
+				</button>
+			</div>
+			<h5>Форма обратного звонка</h5>
+			<p>
+				Оставьте свои данные и мы перезвоним Вам в ближайшее время
+			</p>
+			<form action="">
+				<label for="">
+					<input type="text" placeholder="Ваше имя">
+					<span class="icon-user"></span>
+				</label>
+				<label for="">
+					<input type="text" placeholder="Ваш телефон">
+					<span class="icon-phone"></span>
+				</label>
+				<label for="">
+					<input type="text" placeholder="Удобное время звонка">
+					<span class="icon-clock"></span>
+				</label>
+			</form>
+			<div class="call-back__button">
+				<button type="submit" class="btn">Заказать звонок</button>
+			</div>
+		</div>
+	</div>
+	<!-- End call-back-form -->
 	<!-- Header Area -->
 	<header id="site-header" class="site-header">
 		<!-- Start Topbar -->
@@ -1074,23 +1106,20 @@
 			</div>
 			<div class="row">
 				<div class="col-12">
-					<form action="" class="form">
-						<div class="form-in">
-							<div class="form-inner">
-									<div class="form-gr">
-										<input type="text" name="name" placeholder="Им'я" required="required">
-										<span class="icon-user"></span>
-									</div>
-									<div class="form-gr">
-										<input type="email" name="email" placeholder="E-mail" required="required">
-									</div>
-									
-									<div class="form-gr button">
-										<button>получить подарок</button>
-									</div>	
-								</div>	
+					<form action="" class="form-subscribe">
+						<div class="form-inner">
+							<div class="form-gr">
+								<input type="text" name="name" placeholder="Им'я" required="required">
+								<span class="icon-user"></span>
 							</div>
-						</form>
+							<div class="form-gr">
+								<input type="email" name="email" placeholder="E-mail" required="required">
+							</div>
+							
+							<div class="form-gr button">
+								<button>получить подарок</button>
+							</div>		
+						</div>
 					</form>
 				</div>
 			</div>
@@ -1209,7 +1238,174 @@
 		<!--/ End Footer Bottom -->
 	</footer>
 	<!--/ End footer -->
- 
+ 	<div class="calc-popap js-popap-chat">
+		<div class="popap-calc-head" style="background-image: url(images/chat.png)">
+		</div>
+		<h3>Рассчитаю цену вашего тура прямо сейчас!</h3>
+		<a href="#" class="btn-popap">Рассчитать</a>
+		
+		<p>Услуга совершенно бесплатна</p>
+		<i class="fa fa-window-close js-chat-close" aria-hidden="true"></i>
+	</div>
+	<a href="#" class="calc js-popap-calc">
+		<i class="fa fa-calculator" aria-hidden="true"></i>
+		<p>Рассчитать</p>
+	</a>
+	<div class="popup-step">
+		<div class="popup-step__main">
+			<div class="popup-step__header">
+				<div class="popup-step__icon">
+					<img src="images/step-calc.svg" alt="calc">
+				</div>
+				<div class="popup-step__title">
+					Рассчитайте стоимость своего путешествия
+				</div>
+			</div>
+			<div class="popup-step__line">
+				<div class="popup-step__item popup-step__item_current">
+					<span>1</span>
+				</div>
+				<div class="popup-step__item">
+					<span>2</span>
+				</div>
+				<div class="popup-step__item">
+					<span>3</span>
+				</div>
+				<div class="popup-step__item">
+					<span>4</span>
+				</div>
+				<div class="popup-step__item">
+					<span>5</span>
+				</div>
+			</div>
+			<div class="popup-step__content-line">
+				<div class="popup-step__content js-popup-1">
+					<div class="popup-step__subtitle">Где вы хотите отдохнуть?</div>
+					<div class="popup-step__label">Выберите страну</div>
+					<div class="popup-step__select">
+						<!-- Form Destination -->
+		                    <div class="popup-step__select-group">
+		                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
+		                            <ul class="list">
+		                                <li data-value="1" class="option selected ">Destination One</li>
+		                                <li data-value="2" class="option">Destination Two</li>
+		                                <li data-value="3" class="option">Destination Three</li>
+		                            </ul>
+		                        </div>
+		                    </div>
+					    <!--/ End Form Destination -->
+						<div class="popup-step__button">
+						    <button type="submit" class="btn btn_w153">Далее</button>
+						</div>
+					</div>
+					<div class="popup-step__line-bottom">
+						<p>Осталось всего 4 шага</p>
+						<span>Расчет стоимости тура займёт не более 30 секунд</span>
+					</div>
+				</div>
+				<div class="popup-step__content js-popup-2">
+					<div class="popup-step__subtitle">Какая дата вылета Вам будет удобна?</div>
+					<div class="popup-step__label">Выберите дату</div>
+					<div class="popup-step__select">
+						<!-- Form Destination -->
+		                    <div class="popup-step__select-group">
+		                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
+		                            <ul class="list">
+		                                <li data-value="1" class="option selected ">Destination One</li>
+		                                <li data-value="2" class="option">Destination Two</li>
+		                                <li data-value="3" class="option">Destination Three</li>
+		                            </ul>
+		                        </div>
+		                    </div>
+					    <!--/ End Form Destination -->
+						<div class="popup-step__button">
+						    <button type="submit" class="btn btn_w153">Далее</button>
+						</div>
+					</div>
+					<div class="popup-step__line-bottom">
+						<p>Осталось всего 4 шага</p>
+						<span>Расчет стоимости тура займёт не более 30 секунд</span>
+					</div>
+				</div>
+				<div class="popup-step__content js-popup-3">
+					<div class="popup-step__subtitle">Количество ночей</div>
+					<div class="popup-step__label">Выберите продолжительность тура</div>
+					<div class="popup-step__select">
+						<!-- Form Destination -->
+		                    <div class="popup-step__select-group">
+		                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
+		                            <ul class="list">
+		                                <li data-value="1" class="option selected ">Destination One</li>
+		                                <li data-value="2" class="option">Destination Two</li>
+		                                <li data-value="3" class="option">Destination Three</li>
+		                            </ul>
+		                        </div>
+		                    </div>
+					    <!--/ End Form Destination -->
+						<div class="popup-step__button">
+						    <button type="submit" class="btn btn_w153">Далее</button>
+						</div>
+					</div>
+					<div class="popup-step__line-bottom">
+						<p>Осталось всего 4 шага</p>
+						<span>Расчет стоимости тура займёт не более 30 секунд</span>
+					</div>
+				</div>
+				<div class="popup-step__content js-popup-4">
+					<div class="popup-step__subtitle">Количество взрослых и детей</div>
+					<div class="popup-step__label">Выберите продолжительность тура</div>
+					<div class="popup-step__select">
+						<!-- Form Destination -->
+		                    <div class="popup-step__select-group">
+		                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
+		                            <ul class="list">
+		                                <li data-value="1" class="option selected ">Destination One</li>
+		                                <li data-value="2" class="option">Destination Two</li>
+		                                <li data-value="3" class="option">Destination Three</li>
+		                            </ul>
+		                        </div>
+		                    </div>
+					    <!--/ End Form Destination -->
+						<div class="popup-step__button">
+						    <button type="submit" class="btn btn_w153">Далее</button>
+						</div>
+					</div>
+					<div class="popup-step__line-bottom">
+						<p>Осталось всего 4 шага</p>
+						<span>Расчет стоимости тура займёт не более 30 секунд</span>
+					</div>
+				</div>
+				<div class="popup-step__content popup-step__content_cent js-popup-5">
+					<div class="popup-step__subtitle">Контакты для отправки расчёта</div>
+					<div class="popup-step__label">Выберите продолжительность тура</div>
+					<div class="popup-step__select">
+						<!-- Form Destination -->
+		                    <div class="popup-step__select-group">
+		                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
+		                            <ul class="list">
+		                                <li data-value="1" class="option selected ">Destination One</li>
+		                                <li data-value="2" class="option">Destination Two</li>
+		                                <li data-value="3" class="option">Destination Three</li>
+		                            </ul>
+		                        </div>
+		                    </div>
+					    <!--/ End Form Destination -->
+						<div class="popup-step__button">
+						    <button type="submit" class="btn btn_w153">Далее</button>
+						</div>
+					</div>
+					<div class="popup-step__line-bottom">
+						<p>Осталось всего 4 шага</p>
+						<span>Расчет стоимости тура займёт не более 30 секунд</span>
+					</div>
+				</div>
+			</div>
+			<div class="popup-step__close">
+				<span class="popup-step__close-title">Закрыть</span>
+				<span class="icon-close"></span>
+			</div>	
+		</div>
+	</div>
 	<!-- Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
@@ -1246,14 +1442,13 @@
 	<script src="js/scrollup.js"></script>
 	<!-- Easing JS -->
 	<script src="js/easing.js"></script>
-	<!-- Drop-down -->
-	<script src="js/drop-down.js"></script>
 	<!-- Google Map JS -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>	
 	<script src="js/gmap.min.js"></script>
 	<!-- Active JS -->
 	<script src="js/active.js"></script>
-
+	<!-- Custom JS -->
+	<script src="js/common.js"></script>
 
 </body>
 </html>
