@@ -270,7 +270,7 @@ big {
 }
 
 .section {
-	padding: 120px 0;
+	padding: 60px 0;
 	position: relative;
 }
 .title-line{
@@ -358,7 +358,7 @@ big {
 }
 /* BreadCrumbs */
 .breadcrumbs {
-	background-image: url('http://via.placeholder.com/1500x700');
+	background-image: url('../images/header-image.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 132px 0 100px;
@@ -930,9 +930,9 @@ object {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-.gallery {
+/*.gallery {
 	margin-bottom: 1.5em;
-}
+}*/
 
 .gallery-item {
 	display: inline-block;
