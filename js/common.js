@@ -33,24 +33,70 @@ function dropDown() {
 
 dropDown();
 
+function openPopaps() {
+	var popupOpen = $('.js-popup-step-open');
+	var popupMain = $('.js-popup-main');
+	popupOpen.click(function() {
+		popupMain.addClass('open');
+	})
+};
+openPopaps();
+
 function openPopap() {
-	var popapOpen = $('.js-popup-step-open');
-	var popapmain = $('.js-popup-main');
-	popapOpen.click(function() {
-		popapmain.addClass('open');
+	var popupOpen = $('.js-popap-calc');
+	var popupMain = $('.js-popup-main');
+	popupOpen.click(function() {
+		popupMain.addClass('open');
 	})
 };
 openPopap();
 
-function step() {
-	var item = $('.js-item-3');
-	item.click(function() {
-		item.prevAll().addClass('prev');
-		// $('.is-active').addClass('prev');
-		
-	});
+function closePopap() {
+	var popupClose = $('.js-close-popup');
+	var popupMain = $('.js-popup-main');
+	popupClose.click(function() {
+		popupMain.removeClass('open');
+	})
 };
-step();
+closePopap();
+
+// function step() {
+// 	var item = $('.js-item-3');
+// 	item.click(function() {
+// 		item.prevAll().addClass('prev');
+// 		// $('.is-active').addClass('prev');
+		
+// 	});
+// };
+// step();
+
+function openStep() {
+
+  $('.popup-step__line').each(function() {
+    $(this).find('.popup-step__item').each(function(i) {
+      $(this).click(function(){
+        $(this).addClass('is-active').prevAll().removeClass('is-active').addClass('prev')
+          .closest('div.popup-step__content-line').find('div.popup-step__content').removeClass('is-active').eq(i).addClass('is-active');
+      });
+    });
+  });
+
+};
+openStep();
+
+
+
+// function openStep() {
+// 	var trigerPopap = $('[data-popap-triger]');
+// 	trigerPopap.click(function() {
+// 	  var popapName = $(this).data('popap-triger');
+// 	  console.log(popapName);
+// 	  	$('[data-popap="'+popapName+'"]').addClass('open');
+// 	  	trigerPopap.prevAll().addClass('prev');
+// 	  	// $('body').addClass('open');
+// 	});
+// };
+// openStep();
 
 function callBack() {
 	$(document).ready(function() {
@@ -77,3 +123,8 @@ function callBack() {
 }
 
 callBack();
+
+
+// $('.input-daterange input').each(function() {
+    // $(this).datepicker('clearDates');
+// });

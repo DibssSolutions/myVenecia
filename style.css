@@ -2754,9 +2754,106 @@ Version:	1.0
 	margin-right:10px;
 	padding:0px;
 }
+
 /*======================================
 	End Blog CSS
-========================================*/  
+========================================*/
+
+/*======================================
+   tour CSS
+========================================*/
+.tour {
+	padding: 90px 0 200px;
+}
+.tour__content {
+	border-radius: 10px;
+	background-color: #f8f8f8;
+	padding-top: 63px;
+	padding-bottom: 75px;
+}
+.tour__top {
+	margin-bottom: 32px;
+}
+.tour__img {
+	width: 185px;
+	height: 185px;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	float: left;
+	border-radius: 50%;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tour__info {
+	overflow: hidden;
+	padding-left: 65px;
+	padding-top: 32px;
+}
+.tour__title {
+	margin-bottom: 27px;
+}
+.tour__block {
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.tour__expert {
+	margin-right: 40px;
+}
+.tour__expert-name {
+	color: #293036;
+	font-size: 24px;
+	font-weight: 600;
+}
+.tour__expert-position {
+	color: #293036;
+	font-size: 16px;
+	font-weight: 500;
+}
+.tour__hint {
+	background: #FFF;
+	padding: 21px 27px 16px 86px;
+	box-shadow: 0 4px 7px rgba(0,0,0,.2);
+	position: relative;
+	-webkit-border-radius: 4px;
+	        border-radius: 4px;
+}
+.tour__hint-descr {
+	color: #293036;
+	font-size: 18px;
+	font-style: italic;
+	position: relative;
+}
+.tour__hint-descr:after {
+	content: '';
+	position: absolute;
+	top: 12px;
+	left: -43px;
+	width: 26px;
+	height: 1px;
+	background-color: #293036;
+}
+.tour__hint:after {
+	content: '';
+	position: absolute;
+	border: 10px solid transparent;	
+	border-top: 10px solid white; 
+	border-right: 10px solid white;
+	left: -20px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+/*======================================
+	End tour CSS
+========================================*/
 
 /*======================================
    13. Clients CSS
@@ -3508,8 +3605,11 @@ Version:	1.0
 	top: 50%;
 	transform: translateY(-50%);
 }
-::-webkit-input-placeholder { / Chrome/Opera/Safari /
- 	color: #ffffff;
+.form-subscribe__group .input::-webkit-input-placeholder {
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
 }
 .form-subscribe__group button {
 	border-radius: 33px;
@@ -3740,7 +3840,7 @@ Version:	1.0
  ========================================*/
  .calc {
  	position: fixed;
- 	bottom: 351px;
+ 	bottom: 70px;
  	right: 22px;
  	width: 203px;
  	height: 50px;
@@ -3854,6 +3954,7 @@ Version:	1.0
  /*======================================
    popap-step CSS
   ========================================*/
+
 .popup-step {
 	background-color: rgba(0, 0, 0, 0.5);
 	opacity: 0;
@@ -3873,7 +3974,7 @@ Version:	1.0
 }
 .popup-step__main {
 	max-width: 1142px;
-	padding: 103px 0 102px 54px;
+	padding: 103px 54px 102px 54px;
 	margin: 0 auto;
 	border-radius: 10px;
 	position: relative;
@@ -3890,6 +3991,12 @@ Version:	1.0
 	font-weight: 600;
 	margin-left: 16px;
 }
+.popup-step__content {
+	display: none;
+}
+.popup-step__content.is-active {
+	display: block;
+}
 .popup-step__content_cent {
 	text-align: center;
 }
@@ -3898,6 +4005,7 @@ Version:	1.0
 	font-size: 30px;
 	font-weight: 600;
 	margin-bottom: 27px;
+	line-height: 29px
 }
 .popup-step__label {
 	color: #293036;
@@ -3910,18 +4018,30 @@ Version:	1.0
 	margin-bottom: 48px;
 }
 .popup-step__item {
-	max-width: 193px;
+	max-width: 202px;
     width: 100%;
 	height: 80px;
 	position: relative;
 	cursor: pointer;
 	background: #e2e2e2;
+	display: flex;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
 }
-.popup-step__item span {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+.popup-step__item_big {
+	max-width: 330px;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+}
+.popup-step__item_big:first-child {
+	padding-left: 30px;
+}
+.popup-step__item_big:not(:first-child) {
+	padding-left: 50px;
+}
+.popup-step__number{
 	width: 52px;
 	height: 52px;
 	background-color: #ffffff;
@@ -3932,6 +4052,12 @@ Version:	1.0
 	color: #293036;
 	font-size: 36px;
 	font-weight: 500;
+}
+.popup-step__text {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 600;
+	margin-left: 20px;
 }
 .popup-step__item:before {
  	content: "";
@@ -3952,20 +4078,21 @@ Version:	1.0
     border: 46px solid transparent;
     border-left: 26px solid #f8f8f8;
 }
-.popup-step__item.is-active {
-	background-color: #ff5d5e
-}
-.is-active {
-	background-color: #ff5d5e;
-}
-.is-active:before {
-	border-left: 22px solid #ff5d5e;
-}
 .popup-step__item.prev {
 	background-color:  #40a45c;
 }
-.popup-step__item:before.prev {
+.popup-step__item.prev:before {
 	border-left: 22px solid  #40a45c;
+}
+.popup-step__item.is-active {
+	background-color: #ff5d5e;
+}
+
+.popup-step__item.is-active {
+	background-color: #ff5d5e;
+}
+.popup-step__item.is-active:before {
+	border-left: 22px solid #ff5d5e;
 }
 .popup-step__select {
 	display: flex;
@@ -3975,7 +4102,8 @@ Version:	1.0
 .popup-step__select-group {
     width: 38.6%;
 }
-.popup-step__select-group .nice-select {
+.popup-step__select-group .nice-select,
+.popup-step__row .nice-select {
 	height: 58px;
 	line-height: 58px;
 	padding: 0 0 0 21px;
@@ -3984,14 +4112,19 @@ Version:	1.0
 	background-color: #ffffff;
 	margin-bottom: 0;
 }
-.popup-step__select-group .nice-select:after {
+.popup-step__select-group .nice-select:after,
+.popup-step__row .nice-select:after {
 	display: none;
 }
-.popup-step__select-group .icon-menu {
+.popup-step__select-group .icon-menu,
+.popup-step__row .icon-menu {
 	position: absolute;
 	right: 21px;
 	top: 50%;
 	transform: translateY(-50%);
+}
+.popup-step__row .icon-menu {
+	color: #ff5d5e;
 }
 .popup-step__select-group .nice-select .list {
 	overflow: auto;height: 300px;
@@ -4001,6 +4134,7 @@ Version:	1.0
 }
 .popup-step__select-number:first-child {
 	margin-right: 36px;
+	position: relative;
 }
 .popup-step__select {
 	position: relative;
@@ -4009,7 +4143,7 @@ Version:	1.0
 	content: '';
 	position: absolute;
 	right: -28px;
-	top: 69px;
+	bottom: 28px;
 	width: 20px;
 	height: 1px;
 	background-color: #293036;
@@ -4057,6 +4191,9 @@ Version:	1.0
 	height: 58px;
 	font-weight: 500;
 }
+.popup-step__button_cent {
+	text-align: center;
+}
 .popup-step__line-bottom p {
 	color: #293036;
 	font-size: 20px;
@@ -4080,15 +4217,38 @@ color: #ff5d5e;
 	width: 49%;
 	position: relative;
 }
+.popup-step__form-tour {
+	margin-bottom: 38px;
+}
+.popup-step__field-tour {
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.popup-step__field-tour .input {
+	padding: 23px 45px 22px;
+	width: 100%;
+	outline: none;
+	height: 58px;
+	border-radius: 5px;
+	border: 1px solid #e8e8e8;
+}
+.popup-step__field-tour .input::-webkit-input-placeholder {
+	color: #9e9e9e;
+	font-size: 18px;
+	font-weight: 500;
+}
 .popup-step__field .icon-envelope,
-.popup-step .icon-phone {
+.popup-step__field-tour .icon-envelope,
+.popup-step__field .icon-phone,
+.popup-step__field-tour .icon-phone,
+.popup-step__field-tour .icon-user {
 	color: #ff5d5e;
 	font-size: 18px;
 	position: absolute;
 	right: 21px;
 	top: 50%;
 	transform: translateY(-50%);
-	
 }
 .popup-step__form .input {
 	width: 100%;
@@ -4096,6 +4256,22 @@ color: #ff5d5e;
 	outline: none;
 	color: #293036;
 	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 500;
+}
+.popup-step__office {
+	color: #293036;
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 58px;
+	margin-bottom: 12px;
+}
+.popup-step__row {
+	margin-bottom: 12px;
+	height: 58px;
+}
+.popup-step__row .nice-select .current{
+	color: #9e9e9e;
 	font-size: 18px;
 	font-weight: 500;
 }
