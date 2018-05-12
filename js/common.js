@@ -21,7 +21,7 @@ function dropDown() {
 	$(document).ready(function() {
   $('.js-dropdown-trigger, .dropdown__link').click(function() {
     $('.js-dropdown-list').slideToggle(300);
-    $('.fa-angle-down').toggleClass('active');
+    $('.dropdown__trigger .js-dropdown').toggleClass('active');
   });
 });
 }
@@ -194,4 +194,34 @@ $(function() {
 		});
 	}
   
+});
+
+$(function() {
+	if ($('.js-daterange-menu').length) {
+		$('.js-daterange-menu').daterangepicker({
+			autoApply: true,
+		  	locale: {
+				customClass: 'some-class',
+		       format: 'DD.MM.YYYY'
+		    }
+		}, function(start) {
+			console.log(this.container);
+		});
+	}
+//   $('.js-daterange-menu').on('show.daterangepicker', function(ev, picker) {
+// 	var html = '<div class="datepicker-heder"><span>Выбирите, когда Вам удобно выехать</span> ' +
+// 	'<label class="checkbox">' +
+// 	'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
+// 	'	<span class="checkbox__custom"></span>' +
+// 	'	3 дня' +
+// 	'</label></div>';
+// 	var container = $(picker.container);
+// 	container.append(html);
+// 	console.log(picker);
+//   });
+// $('body').on('change', '.js-daterange-checkbox', function() {
+// 	$('.js-daterange-menu').data('daterangepicker').setStartDate('05.05.2018');
+
+// })
+
 });
