@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/owl-carousel.css">
     <link rel="stylesheet" href="css/slicknav.min.css">
     <link rel="stylesheet" href="css/animate.css">
-	
+	 <link rel="stylesheet" href="css/daterangepicker.css">
 	<!-- TravelTrek StyleSheet -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
@@ -1015,7 +1015,7 @@
 								<span class="tour__expert-position">эксперт по туризму</span>
 							</div>
 							<div class="tour__hint">
-								<p class="tour__hint-descr"></p>Найду для Вас лучшее путешествие!</p>
+								<p class="tour__hint-descr">Найду для Вас лучшее путешествие!</p>
 							</div>
 						</div>
 					</div>
@@ -1287,7 +1287,7 @@
 							</div>
 						</div>
 						<div class="popup-step__line-bottom">
-							<p>Осталось всего 4 шага</p>
+							<p>Осталось всего 2 шага</p>
 							<span>Расчет стоимости тура займёт не более 30 секунд</span>
 						</div>
 					</div>
@@ -1295,29 +1295,16 @@
 						<div class="popup-step__subtitle">Какая дата вылета Вам будет удобна?</div>
 						<div class="popup-step__label">Выберите дату</div>
 						<div class="popup-step__select">
-							<!-- <input id="date_range" readonly> -->
-							<div class="input-group input-daterange">
-							    <input type="text" class="form-control" value="2012-04-05">
-							    <!-- <div class="input-group-addon">to</div> -->
-							    <input type="text" class="form-control" value="2012-04-19">
+						    <div class="popup-step__input-group">
+						    	<input type="text" name="daterange" value="03.05.2018 - 10.05.2018" class="popup-step__-date js-daterange"/>
+								<span class="icon-calendar"></span>
 							</div>
-							<!-- Form Destination -->
-			                    <div class="popup-step__select-group">
-			                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
-			                            <ul class="list">
-			                                <li data-value="1" class="option selected ">Destination One</li>
-			                                <li data-value="2" class="option">Destination Two</li>
-			                                <li data-value="3" class="option">Destination Three</li>
-			                            </ul>
-			                        </div>
-			                    </div>
-						    <!--/ End Form Destination -->
 							<div class="popup-step__button">
 							    <button type="submit" class="btn btn_w153">Далее</button>
 							</div>
 						</div>
 						<div class="popup-step__line-bottom">
-							<p>Осталось всего 4 шага</p>
+							<p>Осталось всего 1 шага</p>
 							<span>Расчет стоимости тура займёт не более 30 секунд</span>
 						</div>
 					</div>
@@ -2042,23 +2029,16 @@
 					<div class="popup-step__subtitle">Какая дата вылета Вам будет удобна?</div>
 					<div class="popup-step__label">Выберите дату</div>
 					<div class="popup-step__select">
-						<!-- Form Destination -->
-		                    <div class="popup-step__select-group">
-		                        <div class="nice-select form-control wide" tabindex="0"><span class="current">Таиланд</span>
-		                            <ul class="list">
-		                                <li data-value="1" class="option selected ">Destination One</li>
-		                                <li data-value="2" class="option">Destination Two</li>
-		                                <li data-value="3" class="option">Destination Three</li>
-		                            </ul>
-		                        </div>
-		                    </div>
-					    <!--/ End Form Destination -->
+						 <div class="popup-step__input-group">
+						    <input type="text" name="daterange" value="03.05.2018 - 10.05.2018" class="popup-step__-date js-daterange"/>
+							<span class="icon-calendar"></span>
+						</div>
 						<div class="popup-step__button">
 						    <button type="submit" class="btn btn_w153">Далее</button>
 						</div>
 					</div>
 					<div class="popup-step__line-bottom">
-						<p>Осталось всего 4 шага</p>
+						<p>Осталось всего 3 шага</p>
 						<span>Расчет стоимости тура займёт не более 30 секунд</span>
 					</div>
 				</div>
@@ -2099,7 +2079,7 @@
 						</div>
 					</div>
 					<div class="popup-step__line-bottom">
-						<p>Осталось всего 4 шага</p>
+						<p>Осталось всего 2 шага</p>
 						<span>Расчет стоимости тура займёт не более 30 секунд</span>
 					</div>
 				</div>
@@ -2142,7 +2122,7 @@
 						</div>
 					</div>
 					<div class="popup-step__line-bottom">
-						<p>Осталось всего 4 шага</p>
+						<p>Осталось всего 1 шаг</p>
 						<span>Расчет стоимости тура займёт не более 30 секунд</span>
 					</div>
 				</div>
@@ -2208,10 +2188,13 @@
 	<!-- ScrollUp JS -->
 	<script src="js/scrollup.js"></script>
 	<!-- Easing JS -->
+	<script src="js/slick.js"></script>
 	<script src="js/easing.js"></script>
 	<!-- Google Map JS -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>	
 	<script src="js/gmap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script src="js/daterangepicker.js"></script>
 	<!-- Active JS -->
 	<script src="js/active.js"></script>
 	<!-- Custom JS -->
