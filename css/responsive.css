@@ -465,6 +465,94 @@ Version:	1.0
 .testimonials.style2 .t-content {
 	padding: 40px 30px;
 }
+.tour {
+	padding: 40px 0 0;
+}
+.tour__img {
+	float: none;
+}
+.tour__info {
+	padding-left: 0;
+}
+.popup-step__line {
+	display: block;
+}
+.tour__block {
+	display: block;
+}
+.tour__expert {
+	margin-bottom: 10px;
+}
+.tour__hint {
+	margin-left: 20px;
+}
+.popup-step {
+	min-height: 500px;
+	overflow: auto;
+}
+.popup-step__main {
+	padding: 60px 20px;
+}
+.popup-step__title {
+	font-size: 28px;
+}
+.popup-step__subtitle {
+	font-size: 25px;
+}
+.popup-step__label {
+	font-size: 16px;
+}
+.popup-step__line-bottom p {
+	font-size: 14px;
+}
+.popup-step__item {
+	width: 100%;
+	padding-right: 0;
+	margin-bottom: 10px;
+}
+.popup-step__item_big {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.popup-step__item_big:not(:first-child) {
+	padding-left: 30px;
+	margin-bottom: 10px;
+}
+.popup-step__select {
+	display: block;
+}
+.popup-step__select-group {
+    width: 100%;
+    height: 58px;
+    margin-bottom: 10px;
+}
+.popup-step__button {
+	margin-left: 0;
+}
+.popup-step__input-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.popup-step__select-number {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.popup-step__select-number:first-child:after {
+    display: none;
+}
+.popup-step__content_cent {
+	text-align: left;
+}
+.popup-step__form {
+	display: block;
+}
+.popup-step__field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.popup-step__office {
+    font-size: 18px;
+}
 .blog-area.style2 .blog-content h4 {
 	font-size: 18px;
 	line-height: 28px;
@@ -553,6 +641,12 @@ Version:	1.0
 .nav-tabs .nav-item {
 	margin-bottom: -1px;
 	margin-top: 20px;
+}
+.popup-step__title {
+	font-size: 20px;
+}
+.popup-step__subtitle {
+	font-size: 18px;
 }
 .testimonials .single-slider {
 	margin-top: 0;
@@ -649,6 +743,9 @@ Version:	1.0
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
+.btn_w153 {
+    padding: 23px 10px 19px;
+ }
 .title-line{
 	margin-bottom:30px;
 }
