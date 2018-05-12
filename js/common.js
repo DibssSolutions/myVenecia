@@ -33,6 +33,16 @@ function dropDown() {
 
 dropDown();
 
+function toggleSearch() {
+$(document).ready(function() {
+  $('.search-buttons__advanced-search, .advanced-form__search-btn').click(function() {
+    $('.advanced-form').slideToggle(300);
+  });
+});
+}
+
+toggleSearch();
+
 function openPopap() {
 	var popapOpen = $('.js-popup-step-open');
 	var popapmain = $('.js-popup-main');
@@ -87,6 +97,16 @@ function checkBox() {
 }
 
 checkBox();
+
+function radioButton() {
+	$(document).ready(function () {
+    $('.activities__radio label input[type=radio]').change(function(){
+        $(this).parent().siblings().children().filter(':checked').not(this).removeAttr('checked');
+    });
+});
+}
+
+radioButton();
 
 function slickSlider() {
  var $status = $('.current-gallery');
