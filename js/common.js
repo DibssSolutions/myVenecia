@@ -69,40 +69,15 @@ function closePopap() {
 };
 closePopap();
 
-// function step() {
-// 	var item = $('.js-item-3');
-// 	item.click(function() {
-// 		item.prevAll().addClass('prev');
-// 		// $('.is-active').addClass('prev');
-		
-// 	});
-// };
-// step();
-
-// function openStep() {
-
-//   $('.popup-step__line').each(function() {
-//     $(this).find('.popup-step__item').each(function(i) {
-//       $(this).click(function(){
-//         $(this).addClass('is-active').prevAll().removeClass('is-active').addClass('prev')
-//           .closest('div.popup-step__content-line').find('div.popup-step__content').removeClass('is-active').eq(i).addClass('is-active');
-//       });
-//     });
-//   });
-
-// };
-// openStep();
-
 function openStep() {
 	$('.popup-step__item').on('click', $('.popup-step__item:not(.is-active)'), function() {
-
  		$(this)
   			.addClass('is-active').prevAll().removeClass('is-active').addClass('prev')
    			.closest('div.popup-step__content-line').find('div.popup-step__content').removeClass('is-active').eq($(this).index()).addClass('is-active');
- });
+ 		});
 		$('.popup-step__item').on('click', function() {
-	 		$(this).nextAll().removeClass('is-active').removeClass('prev')
-	 });
+	 		$(this).nextAll().removeClass('is-active').removeClass('prev').closest('div.popup-step__content-line').find('div.popup-step__content').removeClass('is-active').eq($(this).index()).addClass('is-active');
+		});
 };
 openStep();
 
@@ -132,10 +107,6 @@ function callBack() {
 
 callBack();
 
-
-// $('.input-daterange input').each(function() {
-    // $(this).datepicker('clearDates');
-// });
 function checkBox() {
 	$(document).ready(function () {
     $('.option__form-block label input[type=checkbox]').change(function(){
@@ -212,14 +183,15 @@ if ($('.slider-nav').length) {
 
 slickSlider();
 
-console.log(daterangepicker)
 $(function() {
-  $('.js-daterange').daterangepicker({
-  	autoApply: true,
-    locale: {
-         format: 'DD.MM.YYYY'
-       }
-  }, function(start, end, label) {
-    // console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
+	if ($('.js-daterange').length) {
+		$('.js-daterange').daterangepicker({
+			autoApply: true,
+		  	locale: {
+		       format: 'DD.MM.YYYY'
+		    }
+		}, function(start, end, label) {
+		});
+	}
+  
 });

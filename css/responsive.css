@@ -22,8 +22,7 @@ Version:	1.0
 .form-subscribe__group input {
 	width: 100%;
 }
-@media only screen and (max-width: 450px) {
-.form-subscribe h3 {
+.popup-step__office {
     font-size: 18px;
 }
 }
@@ -504,6 +503,9 @@ Version:	1.0
 .tour__block {
 	display: block;
 }
+.tour__title {
+	font-size: 26px;
+}
 .tour__expert {
 	margin-bottom: 10px;
 }
@@ -526,7 +528,8 @@ Version:	1.0
 .popup-step__label {
 	font-size: 16px;
 }
-.popup-step__line-bottom p {
+.popup-step__line-bottom p,
+.popup-step__line-bottom span {
 	font-size: 14px;
 }
 .popup-step__item {
@@ -573,9 +576,6 @@ Version:	1.0
 .popup-step__field {
     width: 100%;
     margin-bottom: 10px;
-}
-.popup-step__office {
-    font-size: 18px;
 }
 .blog-area.style2 .blog-content h4 {
 	font-size: 18px;
@@ -773,7 +773,7 @@ Version:	1.0
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
-.btn_w153 {
+.popup-step__button .btn_big {
     padding: 23px 10px 19px;
  }
 .title-line{
@@ -847,6 +847,15 @@ Version:	1.0
 	float: none;
 	width: 100%;
 }
+.tour__title {
+	font-size: 22px;
+}
+.tour__expert-name {
+	font-size: 18px;
+}
+.tour__hint-descr {
+	font-size: 14px;
+}
 .blog-area.archive.classic .blog-content {
 	border: none;
 	padding: 0;
@@ -858,6 +867,9 @@ Version:	1.0
 	margin-bottom: 16px;
 	padding-bottom: 30px;
 	position: relative;
+}
+.form-subscribe h3 {
+    font-size: 18px;
 }
 .error-page .error-inner h2 {
 	color: #fff;
