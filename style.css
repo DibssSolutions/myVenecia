@@ -881,7 +881,7 @@ body.open {
 	width: 140px;
 	position: relative;
 	height: 52px;
-	border: none
+	border: none;
 }
 .trip-search .form-group.button.active {
 	display: none;
@@ -4684,7 +4684,6 @@ body.open {
     End popap-step CSS
    ========================================*/
 
-<!-- Start Tour rixos -->
 .rixos__head {
 	display: -moz-flex;
 	display: -ms-flex;
@@ -4853,9 +4852,39 @@ body.open {
 
 }
 
-.slick-slide, .slick-slide *{ 
+.slick-slide, .slick-slide * { 
 	outline: none !important;
 }
 
 
-<!-- End Tour rixos -->
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+	background-color: #ff5d5e; 
+	border-color: transparent;
+	color: #fffff;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
+}
+
+.daterangepicker td.in-range {
+	background-color: rgba(255,141,142,0.5);
+}
+.daterangepicker td.active.end-date {
+	background-color:  #ff5d5e;
+	opacity: 1;
+	-webkit-border-radius: ;
+	        border-radius: ;
+}
+.daterangepicker .drp-calendar.left {
+	padding: 8px 0 18px 7px;
+}
+.daterangepicker .calendar-table th {
+	color: #212529;
+ }
+.daterangepicker .drp-calendar.right {
+	padding: 8px 8px 18px 16px;
+ }
+.daterangepicker .calendar-table .prev span,
+.daterangepicker .calendar-table .next span {
+	padding: 2px;
+ }
