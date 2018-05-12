@@ -308,34 +308,96 @@
 									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/moon-rgb.svg" alt="moon">Кол-во ночей</span>
 										<ul class="list">
 											<li data-value="1" class="option selected ">на 7-10 ночей</li>
-											<li data-value="2" class="option">Activities Two</li>
-											<li data-value="3" class="option">Activities Three</li>
+											<li data-value="2" class="option">на 5-7 ночей</li>
+											<li data-value="3" class="option">на 3-5 ночей</li>
 										</ul>
 									</div>
 								</div>
 								<!--/ End Form Activities -->
 								<!-- Form Activities -->
 								<div class="form-group night">
-									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/users-rgb.svg" alt="user">Кол-во взрослых</span>
-										<ul class="list">
-											<li data-value="1" class="option selected ">Activities One</li>
-											<li data-value="2" class="option">Activities Two</li>
-											<li data-value="3" class="option">Activities Three</li>
-										</ul>
+									<div class="nice-select form-control wide" tabindex="0">
+										<span class="current">
+											<span class="icon-people"></span>
+											Кол-во взрослых
+										</span>
+										<div class="list">
+											<div class="activities__form-block">
+												<div class="activities__text">
+													<span class="icon-people"></span>
+													<span>Взрослые</span>
+												</div>
+												<div class="activities__radio">
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">1</span>
+													</label>
+													<label>	
+														<input class="radio" type="radio" checked="checked">
+														<span class="radio-custom">2</span>
+													</label>
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">3</span>
+													</label>
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">4</span>
+													</label>
+												</div>
+											</div>	
+											<div class="activities__form-block padd-top">
+												<div class="activities__text">
+													<img src="images/child.svg" alt="child-img">
+													<span>Дети от 2 до 11 лет<br>(включительно)</span>
+												</div>
+												<div class="activities__radio">
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom color-bg">нет</span>
+													</label>
+													<label>	
+														<input class="radio" type="radio">
+														<span class="radio-custom">1</span>
+													</label>
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">2</span>
+													</label>
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">3</span>
+													</label>
+												</div>	
+											</div>
+											<div class="activities__form-block padd-top padd-bott">
+												<div class="activities__text">
+													<img src="images/child-lit.svg" alt="child-img">
+													<span>Младенцы до 2 лет</span>
+												</div>
+												<div class="activities__radio">
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom color-bg">нет</span>
+													</label>
+													<label>	
+														<input class="radio" type="radio">
+														<span class="radio-custom">1</span>
+													</label>
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">2</span>
+													</label>
+													<label>
+														<input class="radio" type="radio">
+														<span class="radio-custom">3</span>
+													</label>
+												</div>	
+											</div>
+										</div>
 									</div>
 								</div>
 								<!--/ End Form Activities -->
-								<!-- Form Budget -->
-								<div class="form-group children">
-									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/child-rgb.svg" alt="children">Кол-во детей</span>
-										<ul class="list">
-											<li data-value="1" class="option selected">$30</li>
-											<li data-value="2" class="option">$30</li>
-											<li data-value="3" class="option">$30</li>
-										</ul>
-									</div>
-								</div>
-								<!--/ End Form Budget -->
 								<!-- Form Button -->
 								<div class="form-group button">
 									<button type="submit" class="btn">Найти</button>
@@ -344,106 +406,180 @@
 							</form>
 							<form class="advanced-form">
 								<div class="advanced-form__row">
-									<div class="advanced-form__row-wrap">
-										<p class="advanced-form__title">Категория тура</p>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										Пляжный</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										Экскурсионный тур</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										Авторский тур</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										Медовый месяц</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										Круиз</label>
-									</div>
-									<div class="advanced-form__search-btn form-group button">
-										<button type="submit" class="btn">Расширенный фильтер</button>
-									</div>
+									<div class="advanced-form__row-wrap activities__form-block">
+										<div class="activities__form-block">
+											<div class="activities__text">
+												<span class="activities__title">Категория тура</span>
+											</div>
+											<div class="activities__radio">
+												<label>	
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Пляжный
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Экскурсионный тур
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Авторский тур
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Медовый месяц
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Круиз
+												</label>
+											</div>	
+										</div>
+									</div>	
 								</div>
 								<div class="advanced-form__row">
-									<div class="advanced-form__row-wrap">
-										<p class="advanced-form__title">Тип тура</p>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										семейный отдых</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										молодежный</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										парам</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										55+</label>
+									<div class="advanced-form__row-wrap activities__form-block">
+										<div class="activities__form-block">
+											<div class="activities__text">
+												<span class="activities__title">Тип тура</span>
+											</div>
+											<div class="activities__radio">
+												<label>	
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Семейный отдых
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Молодежный
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Парам
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													55+
+												</label>
+											</div>	
+										</div>
 									</div>
-									<div class="advanced-form__row-wrap">
-										<p class="advanced-form__title">Уровень отеля звезды:</p>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										Любой</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										2</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										3</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										4</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										5</label>
-									</div>
+									<div class="advanced-form__row-wrap activities__form-block">
+										<div class="activities__form-block">
+											<div class="activities__text">
+												<span class="activities__title">Уровень отеля звезды:</span>
+											</div>
+											<div class="activities__radio">
+												<label>	
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Любой
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													2
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													3
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													4
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													5
+												</label>
+											</div>	
+										</div>
+									</div>	
 								</div>
 								<div class="advanced-form__row">
-									<div class="advanced-form__row-wrap">
-										<p class="advanced-form__title">Тип размещения</p>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										семейный</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										дабл</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										индивидуал</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										трипл</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										сьют</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										две раздельные спальни</label>
+									<div class="advanced-form__row-wrap activities__form-block">
+										<div class="activities__form-block">
+											<div class="activities__text">
+												<span class="activities__title">Тип размещения</span>
+											</div>
+											<div class="activities__radio">
+												<label>	
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Семейный
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Дабл
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Индивидуал
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Трипл
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Сьют
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Две раздельные спальни
+												</label>
+											</div>	
+										</div>
 									</div>
-									<div class="advanced-form__row-wrap">
-										<p class="advanced-form__title">Питание</p>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										без</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										завтрак</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										полупансион</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										все вкл.</label>
-										<label>
-										<input type="checkbox" class="advanced-form__checkbox">
-										все вкл.</label>
+								</div>		
+								<div class="advanced-form__row">
+									<div class="advanced-form__row-wrap activities__form-block">
+										<div class="activities__form-block">
+											<div class="activities__text">
+												<span class="activities__title">Питание</span>
+											</div>
+											<div class="activities__radio">
+												<label>	
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Без
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Завтрак
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Полупансион
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Все вкл.
+												</label>
+											</div>	
+										</div>
 									</div>
 								</div>	
 								<!-- Form Button -->
-								<div class="advanced-form__search-btn form-group button">
+								<div class="advanced-form__search-btn">
 									<button type="submit" class="btn">Найти</button>
 								</div>
 								<!--/ End Form Button -->
