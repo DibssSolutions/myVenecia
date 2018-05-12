@@ -4444,7 +4444,8 @@ body.open {
 .popup-step__button {
 	margin-left: 12px;
 }
-.popup-step__button .btn_w153 {
+.popup-step__button .btn_w153,
+.popup-step__button .btn_big {
 	padding: 23px 50px 19px;
 	height: 58px;
 	font-weight: 500;

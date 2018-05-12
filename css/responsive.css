@@ -20,8 +20,7 @@ Version:	1.0
 .form-subscribe__group input {
 	width: 100%;
 }
-@media only screen and (max-width: 450px) {
-.form-subscribe h3 {
+.popup-step__office {
     font-size: 18px;
 }
 }
@@ -550,9 +549,6 @@ Version:	1.0
     width: 100%;
     margin-bottom: 10px;
 }
-.popup-step__office {
-    font-size: 18px;
-}
 .blog-area.style2 .blog-content h4 {
 	font-size: 18px;
 	line-height: 28px;
@@ -743,7 +739,7 @@ Version:	1.0
 }
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
-.btn_w153 {
+.popup-step__button .btn_big {
     padding: 23px 10px 19px;
  }
 .title-line{
@@ -828,6 +824,9 @@ Version:	1.0
 	margin-bottom: 16px;
 	padding-bottom: 30px;
 	position: relative;
+}
+.form-subscribe h3 {
+    font-size: 18px;
 }
 .error-page .error-inner h2 {
 	color: #fff;

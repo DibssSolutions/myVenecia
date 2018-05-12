@@ -89,13 +89,12 @@ closePopap();
 
 function openStep() {
 	$('.popup-step__item').on('click', $('.popup-step__item:not(.is-active)'), function() {
-
  		$(this)
   			.addClass('is-active').prevAll().removeClass('is-active').addClass('prev')
    			.closest('div.popup-step__content-line').find('div.popup-step__content').removeClass('is-active').eq($(this).index()).addClass('is-active');
  });
 		$('.popup-step__item').on('click', function() {
-	 		$(this).nextAll().removeClass('is-active').removeClass('prev')
+	 		$(this).nextAll().removeClass('is-active').removeClass('prev').closest('div.popup-step__content-line').find('div.popup-step__content').removeClass('is-active').eq($(this).index()).addClass('is-active');
 	 });
 };
 openStep();
@@ -126,10 +125,6 @@ function callBack() {
 
 callBack();
 
-
-// $('.input-daterange input').each(function() {
-    // $(this).datepicker('clearDates');
-// });
 function checkBox() {
 	$(document).ready(function () {
     $('.option__form-block label input[type=checkbox]').change(function(){
@@ -195,14 +190,17 @@ if ($('.slider-nav').lenght) {
 }
 
 slickSlider();
-console.log(daterangepicker)
+
 $(function() {
-  $('.js-daterange').daterangepicker({
-  	autoApply: true,
-    locale: {
-         format: 'DD.MM.YYYY'
-       }
-  }, function(start, end, label) {
-    // console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
+	if ($('.js-daterange').length) {
+		$('.js-daterange').daterangepicker({
+			autoApply: true,
+		  locale: {
+		       format: 'DD.MM.YYYY'
+		     }
+		}, function(start, end, label) {
+		  // console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+		});
+	}
+  
 });
