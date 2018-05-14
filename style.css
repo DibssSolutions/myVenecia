@@ -4677,12 +4677,12 @@ body.open {
 	margin: 0 auto 29px;
 }
 .popup-step__close {
-	position: absolute;
-	top: 22px;
-	right: 27px;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	position: absolute;
+	top: 22px;
+	right: 27px;
 }
 .popup-step__close .icon-close {
 	color: #ff5d5e;
