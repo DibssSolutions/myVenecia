@@ -493,6 +493,7 @@ Version:	1.0
 }
 .tour__img {
 	float: none;
+	margin: 0 auto;
 }
 .tour__info {
 	padding-left: 0;
@@ -533,17 +534,22 @@ Version:	1.0
 	font-size: 14px;
 }
 .popup-step__item {
-	width: 100%;
-	padding-right: 0;
+	width: auto;
+	max-width: 100%;
+	margin-right: 31px;
 	margin-bottom: 10px;
 }
 .popup-step__item_big {
-	width: 100%;
+	width: auto;
 	margin-bottom: 10px;
 }
 .popup-step__item_big:not(:first-child) {
 	padding-left: 30px;
 	margin-bottom: 10px;
+}
+.popup-step__line {
+	padding-right: 0;
+	overflow: hidden;
 }
 .popup-step__select {
 	display: block;
@@ -554,7 +560,7 @@ Version:	1.0
     margin-bottom: 10px;
 }
 .popup-step__button {
-	margin-left: 0;
+	text-align: center;
 }
 .popup-step__input-group {
     width: 100%;
@@ -769,6 +775,9 @@ Version:	1.0
 }
 .slider-nav .single-gallery {
 	height: 90px;
+}
+.calc-popap {
+	display: none;
 }
 }
 /* Mobile Screen */

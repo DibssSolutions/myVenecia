@@ -184,13 +184,13 @@ if ($('.slider-nav').length) {
 slickSlider();
 
 $(function() {
-	if ($('.js-daterange').length) {
+	if (($('.js-daterange').length)){
 		$('.js-daterange').daterangepicker({
 			autoApply: true,
+			drops: 'up',
 		  	locale: {
 		       format: 'DD.MM.YYYY'
 		    }
-		}, function(start, end, label) {
 		});
 	}
   
