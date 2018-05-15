@@ -4082,19 +4082,19 @@ body.open {
 	color:#FF8767;
 	padding-left:5px;
 }
-.footer .single-widget.gallery ul {
+.footer .single-widget.gallery-block ul {
 	margin-left: -10px;
 	overflow: hidden;
 }
-.footer .single-widget.gallery ul li {
+.footer .single-widget.gallery-block ul li {
 	float: left;
 	margin: 10px 0 0 10px;
 	padding: 0;
 }
-.footer .single-widget.gallery ul li a{
+.footer .single-widget.gallery-block ul li a{
 	padding:0;
 }
-.footer .single-widget.gallery ul li img {
+.footer .single-widget.gallery-block ul li img {
 	width: 80px;
 	height: 65px;
 }
@@ -4810,7 +4810,8 @@ body.open {
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
-	align-items: center;
+	-webkit-align-items: center;
+	        align-items: center;
 	cursor: pointer;
 }
 .popup-step__close .icon-close {

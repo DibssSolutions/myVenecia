@@ -6,8 +6,6 @@ Description: Travel Trek is a Tour & Travel Website Templates.
 Version:	1.0
 ========================================*/
 @media only screen and (max-width: 1024px) {
-
-
 .form-subscribe__inner {
 	display: block;
 	text-align: center;
@@ -25,6 +23,19 @@ Version:	1.0
 .popup-step__office {
     font-size: 18px;
 }
+}
+@media only screen and (max-width: 991px) {
+.testimonial-image {
+	display:none 
+}
+.testimonials .owl-carousel .owl-nav {
+	position: relative;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}	
 }
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -691,14 +702,14 @@ Version:	1.0
 .testimonials .single-slider span {
 	margin-top: 15px;
 }
-.testimonials .owl-carousel .owl-nav {
+/* .testimonials .owl-carousel .owl-nav {
 	position: relative;
 	right: 0;
 	top: auto;
 	bottom: 0;
 	margin-top: 20px;
 	margin-bottom: 20px;
-}
+} */
 .testimonials .testimonial-slider::before {
 	top: -25px;
 }
