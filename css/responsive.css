@@ -788,7 +788,7 @@ Version:	1.0
 	display: none;
 }
 }
-/* Mobile Screen
+/*Mobile Screen*/
 @media only screen and (max-width: 450px) {
 .popup-step__button .btn_big {
     padding: 23px 10px 19px;

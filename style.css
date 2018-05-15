@@ -5091,7 +5091,15 @@ body.open {
 	margin-top: 20px;
 	color: #747474;
 	background-color: #fff;
-	min-width: 400px;
+	max-width: 400px;
+}
+
+.calendars-cmd.calendars-cmd-today {
+	display: none;
+} 
+
+.calendars-month.last {
+	padding-right: 15px;
 }
 
 .calendars-month td .calendars-selected {
@@ -5127,6 +5135,7 @@ body.open {
 
 .calendars-month {
 	padding-left: 15px;
+	float: none;
 }
 .calendars-month a {
 	font-weight: 500;
@@ -5135,6 +5144,14 @@ body.open {
 .calendars-month thead,
 .calendars-ctrl {
 	display: none;
+}
+
+.calendars-month td .calendars-today {
+	color: #fff;
+}
+
+.calendars-month td .calendars-today:hover {
+	color: #fff;
 }
 
 .calendars-month td .calendars-weekend,
@@ -5147,4 +5164,28 @@ body.open {
 
 .calendars-month td .calendars-other-month {
 
+}
+
+.calendars-month td .calendars-weekend:hover {
+	background-color: #ff5d5e;
+}
+
+.calendars-month td:hover {
+	color: #fff;
+}
+
+.calendars-month-row {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: flex-end;
+	align-items: flex-end;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.calendars.calendars-multi.custom-calendar {
+	width: auto !important;
 }
