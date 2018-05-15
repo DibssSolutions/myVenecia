@@ -2429,7 +2429,7 @@ body.open {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 0 0px 100px;
+	padding: 0 0px 120px;
 }
 
 .confidence .single-card {
@@ -4629,6 +4629,7 @@ body.open {
 }
 .popup-step__button_cent {
 	text-align: center;
+	margin-left: 0;
 }
 .popup-step__line-bottom p {
 	color: #293036;
@@ -4765,6 +4766,7 @@ body.open {
 	position: absolute;
 	top: 22px;
 	right: 27px;
+	display: flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;

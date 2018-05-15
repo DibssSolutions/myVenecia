@@ -560,6 +560,7 @@ Version:	1.0
 }
 .popup-step__button {
 	text-align: center;
+	margin-left: 0;
 }
 .popup-step__button .btn_big {
     padding: 19px 20px;
@@ -788,11 +789,14 @@ Version:	1.0
 	display: none;
 }
 }
-/* Mobile Screen
+/* /* Mobile Screen */
 @media only screen and (max-width: 450px) {
 .popup-step__button .btn_big {
     padding: 23px 10px 19px;
  }
+/* .popup-step__button .btn_w153 {
+ 	padding: 19px 10px;
+ } */
 .title-line{
 	margin-bottom:30px;
 }
@@ -896,4 +900,4 @@ Version:	1.0
 .error-page .error-inner p {
 	font-size: 15px;
 }
-}
+} 
