@@ -217,12 +217,15 @@ $(function() {
   
 });
 
+
+
 $(function() {
 	var initFlug = false;
 	$('#configPicker').calendarsPicker({
 		 monthsToShow: 2,
 		 showOtherMonths: true,
 		 multiSelect: 2,
+		 dateFormat: 'dd.mm.yyyy ',
 		 pickerClass: 'custom-calendar',
 		 onShow: function(dates) {
 
@@ -239,14 +242,57 @@ $(function() {
 							'</label>' +
 						'</div>';
 			var container = $('body .custom-calendar');
-				console.log(container.length);
 			 	if (!initFlug) {
 				initFlug = true;
 				container.prepend(html);	
 			} else {
-				// console.log(picker);
 			}
+			initFlug = false;
 		 },
+		 onChangeMonthYear: function(year, month) {
+
+			var html =  '<div class="datepicker-heder">' +
+							'<span>Выбирите, когда Вам удобно выехать</span> ' +
+							'<label class="checkbox">' +
+								'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
+								'<span class="checkbox__custom"></span>' +
+								'<span class="plus-minus">' +
+									'<i class="fas fa-plus"></i>' +
+									'<i class="fas fa-minus"></i>' +
+								'</span>' +
+								'3 дня (гибкие даты)' +
+							'</label>' +
+						'</div>';
+			var container = $('body .custom-calendar');
+			 	if (!initFlug) {
+				initFlug = true;
+				container.prepend(html);
+			} else {
+			}
+			initFlug = false;	
+    	},
+    	onSelect: function(dates) {
+
+			var html =  '<div class="datepicker-heder">' +
+							'<span>Выбирите, когда Вам удобно выехать</span> ' +
+							'<label class="checkbox">' +
+								'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
+								'<span class="checkbox__custom"></span>' +
+								'<span class="plus-minus">' +
+									'<i class="fas fa-plus"></i>' +
+									'<i class="fas fa-minus"></i>' +
+								'</span>' +
+								'3 дня (гибкие даты)' +
+							'</label>' +
+						'</div>';
+			var container = $('body .custom-calendar');
+			 	if (!initFlug) {
+				initFlug = true;
+				container.prepend(html);
+			} else {
+			}
+			initFlug = false;
+    	},
 	});
 		// if (!container.hasClass('some-class')) {
 		// 	container.addClass('some-class');
@@ -256,6 +302,12 @@ $(function() {
 		// }
 		// console.log(container);
 });
+
+$('body').on('change', '.js-daterange-checkbox', function(){
+		$('.hide-span').toggleClass('active');
+});
+
+	
 
 // $(function() {
 // 	var today = new Date();
@@ -301,13 +353,3 @@ $(function() {
 
 	
 // })
-
-// 	if ($('.datepicker-heder label input[type=checkbox]').attr('checked')){
-// 		console.log('hi');
-// 	} else {
-// 		$('.calendar-table tbody tr td').removeClass('end-date');
-// 	};
-// 	$('body').on('click', '.some-class td', function() {
-// 		console.log('hi');
-//  })
-// });
