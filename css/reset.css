@@ -572,10 +572,12 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
+	/*color: #666;*/
+	color: #757575;
+	font-weight: 500;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding: 3px;
+	/*padding: 3px;*/
 }
 
 input[type="text"]:focus,

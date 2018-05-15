@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 	
 	<!-- StyleSheet -->
+	<link rel="stylesheet" href="css/jquery.calendars.picker.css"> 
     <link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/datepicker.css">
@@ -99,29 +100,6 @@
 	<!-- End call-back-form -->
 	<!-- Header Area -->
 	<header id="site-header" class="site-header">
-		<!-- Start Topbar -->
-        <div class="topbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-						<!-- Text -->
-						<p>Welcome To Travel Trek Official Website</p>
-						<!--/ End Text -->
-                    </div>
-					<div class="col-lg-6 col-md-6 col-12">
-						<!-- Social -->
-						<ul class="social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						</ul>
-						<!--/ End Social -->
-                    </div>
-				</div>
-            </div>
-        </div>
-		<!--/ End Topbar -->
 		<!-- Middle Header -->
 		<div class="middle-header">
 			<div class="container">
@@ -139,8 +117,12 @@
 						<div class="header-widget">
 							<!-- Single Widget -->
 							<div class="single-widget left-padd">
-								<img src="images/viber-icon.svg" alt="viber-icon">
-								<img src="images/call-icon.svg" alt="call-icon">
+								<a href="tel:+34 604145 836">
+									<img src="images/viber-icon.svg" alt="viber-icon">
+								</a>
+								<a href="tel:+34 604145 836">
+									<img class="phone" src="images/call-icon.svg" alt="call-icon">
+								</a>	
 								<h4>+34 604145 836</h4>
 								<p>Troll Free </p>
 							</div>
@@ -186,12 +168,12 @@
 						<div class="main-menu">
 							<nav class="navigation">
 								<ul class="nav menu">
-									<li class="active"><a href="#">Главная<i class="fa"></i></a>
+									<li class="active"><a href="index.html">Главная<i class="fa"></i></a>
 									</li>
 									<li><a href="#">Экскурсионные туры<i class="fa fa-angle-down"></i></a>
 										<ul class="dropdown">
-											<li><a href="#">Авторские путешествия</a></li>
-											<li><a href="#">Медовый месяц</a></li>
+											<li><a href="trip-3-column.html">Авторские путешествия</a></li>
+											<li><a href="trip-single.html">Медовый месяц</a></li>
 											<li><a href="#">Круизы</a></li>
 										</ul>
 									</li>
@@ -297,8 +279,13 @@
 								<!--/ End Form Destination -->
 								<!-- Form Duration -->
 								<div class="form-group duration">
-									<div class="nice-select form-control wide" tabindex="0"><span class="current"><img src="images/calendar-rgb.svg" alt="calendar"></span>
-									    	<input type="text" name="daterange" value="03.05.2018 - 10.05.2018" class="popup-step__-date js-daterange-menu">
+									<div class="nice-select form-control wide" tabindex="0">
+										<span class="current">
+											<img src="images/calendar-rgb.svg" alt="calendar">
+										</span>
+										<input type="text" id="configPicker" size="20" 
+    									">
+									    <!-- <input type="text"  value="" class="js-daterange-menu"> -->
 									</div>
 								</div>
 								<!--/ End Form Duration -->
@@ -572,6 +559,11 @@
 													<input class="radio" type="radio">
 													<span class="radio-custom"></span>
 													Все вкл.
+												</label>
+												<label>
+													<input class="radio" type="radio">
+													<span class="radio-custom"></span>
+													Подобрать только отель без тура
 												</label>
 											</div>	
 										</div>
@@ -1073,8 +1065,7 @@
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-12">
 					<div class="title-line">
-						<p>Popular Trips</p>
-						<h2>Worthy time spent<span>around the world</span></h2>
+						<h2>Самые<br> популярные туры</h2>
 						<p class="text">The average employee is wasting between 50%-80% of their day on non-work related distractions. Time wasted is money wasted, that's money that could stay in your pocket simply by changing the way you assign your tasks.</p>
 					</div>
 				</div> 
@@ -2386,8 +2377,13 @@
 	<!-- Google Map JS -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnhgNBg6jrSuqhTeKKEFDWI0_5fZLx0vM"></script>	
 	<script src="js/gmap.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 	<script src="js/daterangepicker.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/jquery.calendars.js"></script> 
+	<script src="js/jquery.calendars.plus.js"></script>
+	<script src="js/jquery.plugin.js"></script> 
+	<script src="js/jquery.calendars.picker.js"></script>
 	<!-- Active JS -->
 	<script src="js/active.js"></script>
 	<!-- Custom JS -->

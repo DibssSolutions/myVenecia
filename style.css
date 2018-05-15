@@ -318,7 +318,7 @@ body.open {
             transform-origin: 50%;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    transition: all 0.15s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .dropdown__arrow.js-dropdown.active {
 	-webkit-transform: rotate(270deg);
@@ -351,19 +351,26 @@ body.open {
 	z-index: 10000;
 	padding-bottom: 5px;
 }
-.site-header .single-widget:last-child{
+.site-header .single-widget:last-child {
 	margin-right:0px;
 }
-.site-header .single-widget img{
+.site-header .single-widget img {
 	position:absolute;
 	left:0;
 	top:0;
 }
-.site-header .single-widget img:last-child{
+
+.site-header .single-widget .phone {
 	position:absolute;
-	left:0;
+	left: 45px;
 	top:0;
 }
+
+/*.site-header .single-widget img:last-child {
+	position:absolute;
+	left: 40px;
+	top:0;
+}*/
 .site-header .single-widget h4 {
 	font-size: 15px;
 }
@@ -668,7 +675,7 @@ body.open {
 	z-index:999;
 	top:0;
 	left:0;
-	bottom:auto;
+	bottom: auto;
 	transition:all 0.4s ease;
 	-webkit-animation: fadeInDown 0.5s both 0.5s;
 	        animation: fadeInDown 0.5s both 0.5s;
@@ -846,15 +853,6 @@ body.open {
 .dastination__wrap .current .icon-people {
 	font-size: 17px;
 	color:#ff5d5e;
-}
-
-.form-group .nice-select input[type="text"] {
-	border: none;
-	background-color: rgba(238, 238, 238, 0.58);
-	font-weight: 500;
-	font-size: 13px;
-	outline: none;
-	margin-top: 4px;
 }
 
 .dastination__wrap .form-group .nice-select {
@@ -1098,7 +1096,7 @@ body.open {
 .error-serch .error-serch__text {
 	font-style: 14px;
 	color: #ff5d5e;
-
+	font-weight: 500;
 }
 /*End Error search*/
 
@@ -1528,6 +1526,7 @@ body.open {
 }
 .popular-trips .title-line h2{
 	color:#fff;
+	font-weight: 600;
 }
 .popular-trips .title-line h2 span{
 	display:block;
@@ -4769,7 +4768,6 @@ body.open {
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
-	display: flex;
 	align-items: center;
 	cursor: pointer;
 }
@@ -4991,3 +4989,140 @@ body.open {
 .daterangepicker .calendar-table .next span {
 	padding: 2px;
  }
+
+/*calendar style*/
+.daterangepicker {
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 20px;
+}
+.datepicker-heder {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 10px 0 0px 15px;
+	font-size: 12px;
+	font-weight: 500;
+	color: #757575;
+}
+
+.datepicker-heder label {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.datepicker-heder label {
+	margin-bottom: 0;
+}
+
+.datepicker-heder .plus-minus {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	font-size: 6px;
+	margin: 3px 7px 0 ;
+}
+
+.checkbox .checkbox__input {
+	display: none;
+}
+
+.checkbox .checkbox__custom {
+	position: relative;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.checkbox__input:checked + .checkbox__custom::before {
+	content: url(images/check-white.svg);
+	display: block;
+	position: absolute;
+	padding: 0 2px 0;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+	background: #ff5d5e;
+	border-radius: 3px;
+}
+
+.form-group .nice-select input[type="text"] {
+	border: none;
+	background-color: rgba(238, 238, 238, 0.58);
+	font-weight: 500;
+	font-size: 13px;
+	outline: none;
+	margin-top: 4px;
+	transition: .1s;
+}
+
+.form-group .nice-select input:hover,
+.form-group .nice-select input:focus {
+	color: #ff5d5e;
+}
+
+
+.datepicker {
+	z-index: 10;
+}
+
+.custom-calendar {
+	color: #747474;
+	background-color: #fff;
+	min-width: 420px;
+}
+
+.calendars {
+	border: 1px solid rgba(238,238,238,.58);
+	color: #747474;
+}
+
+.custom-calendar .calendars-nav {
+	background-color: #fff;
+}
+
+.calendars-month-header, 
+.calendars-month-header select,
+.calendars-month-header input {
+	color: #000;
+	background-color: #fff;
+}
+
+.calendars-month {
+	border: none;
+
+}
+
+.calendars-month thead th span{
+	color: #000;
+	background-color: #fff;
+}
+
+.calendars-month thead th  {
+    border: none;
+} 
+
+.calendars-ctrl {
+	display: none;
+}
