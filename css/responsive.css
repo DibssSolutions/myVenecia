@@ -515,7 +515,6 @@ Version:	1.0
 }
 .popup-step {
 	min-height: 500px;
-	overflow: auto;
 }
 .popup-step__main {
 	padding: 60px 20px;
@@ -561,6 +560,9 @@ Version:	1.0
 }
 .popup-step__button {
 	text-align: center;
+}
+.popup-step__button .btn_big {
+    padding: 19px 20px;
 }
 .popup-step__input-group {
     width: 100%;
@@ -766,6 +768,12 @@ Version:	1.0
 .footer .social {
 	float: none;
 }
+.footer .dev {
+    float: none;
+    display: flex;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
 .trip-single .gallery-slider, 
 .trip-single .single-slider {
 	height: auto;
@@ -780,7 +788,7 @@ Version:	1.0
 	display: none;
 }
 }
-/* Mobile Screen */
+/* Mobile Screen
 @media only screen and (max-width: 450px) {
 .popup-step__button .btn_big {
     padding: 23px 10px 19px;
