@@ -197,31 +197,96 @@ $(function() {
 });
 
 $(function() {
-	if ($('.js-daterange-menu').length) {
-		$('.js-daterange-menu').daterangepicker({
-			autoApply: true,
-		  	locale: {
-				customClass: 'some-class',
-		       format: 'DD.MM.YYYY'
-		    }
-		}, function(start) {
-			console.log(this.container);
-		});
-	}
-//   $('.js-daterange-menu').on('show.daterangepicker', function(ev, picker) {
-// 	var html = '<div class="datepicker-heder"><span>Выбирите, когда Вам удобно выехать</span> ' +
-// 	'<label class="checkbox">' +
-// 	'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
-// 	'	<span class="checkbox__custom"></span>' +
-// 	'	3 дня' +
-// 	'</label></div>';
+	var initFlug = false;
+	$('#configPicker').calendarsPicker({
+		 monthsToShow: 2,
+		 showOtherMonths: true,
+		 multiSelect: 2,
+		 pickerClass: 'custom-calendar',
+		 onShow: function(dates) {
+
+			var html =  '<div class="datepicker-heder">' +
+							'<span>Выбирите, когда Вам удобно выехать</span> ' +
+							'<label class="checkbox">' +
+								'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
+								'<span class="checkbox__custom"></span>' +
+								'<span class="plus-minus">' +
+									'<i class="fas fa-plus"></i>' +
+									'<i class="fas fa-minus"></i>' +
+								'</span>' +
+								'3 дня (гибкие даты)' +
+							'</label>' +
+						'</div>';
+			var container = $('body .custom-calendar');
+				console.log(container.length);
+			 	if (!initFlug) {
+				initFlug = true;
+				container.prepend(html);	
+			} else {
+				// console.log(picker);
+			}
+		 },
+	});
+		// if (!container.hasClass('some-class')) {
+		// 	container.addClass('some-class');
+			// container.prepend(html);	
+		// } else {
+		// 	// console.log(picker);
+		// }
+		// console.log(container);
+});
+
+// $(function() {
+// 	var today = new Date();
+// 	var startDate;
+// 	if ($('.js-daterange-menu').length) {
+// 		$('.js-daterange-menu').daterangepicker({
+// 			autoApply: true,
+// 		  	locale: {
+// 		    	defaultDate: today,
+// 		    	format: 'DD.MM.YYYY',
+// 		    	maxDate: 1
+// 		    }
+// 		}, function(start, end, label) {
+// 			console.log(this.container);
+// 		});
+// 	}
+// 	var daterangeMenu = $('.js-daterange-menu');
+//   		daterangeMenu.on('show.daterangepicker', function(ev, picker) {
+// 	var html =  '<div class="datepicker-heder">' +
+// 					'<span>Выбирите, когда Вам удобно выехать</span> ' +
+// 					'<label class="checkbox">' +
+// 						'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
+// 						'<span class="checkbox__custom"></span>' +
+// 						'<span class="plus-minus">' +
+// 							'<i class="fas fa-plus"></i>' +
+// 							'<i class="fas fa-minus"></i>' +
+// 						'</span>' +
+// 						'3 дня (гибкие даты)' +
+// 					'</label>' +
+// 				'</div>';
+// 	startDate = picker.startDate._d;
 // 	var container = $(picker.container);
-// 	container.append(html);
-// 	console.log(picker);
+// 		if (!container.hasClass('some-class')) {
+// 			container.prepend(html);	
+// 			container.addClass('some-class');
+// 		} else {
+// 			// console.log(picker);
+// 		}
 //   });
 // $('body').on('change', '.js-daterange-checkbox', function() {
-// 	$('.js-daterange-menu').data('daterangepicker').setStartDate('05.05.2018');
+// 	daterangeMenu.data('daterangepicker').setEndDate(startDate);
+// 	$("body").on("apply.daterangepicker"); 
 
+	
 // })
 
-});
+// 	if ($('.datepicker-heder label input[type=checkbox]').attr('checked')){
+// 		console.log('hi');
+// 	} else {
+// 		$('.calendar-table tbody tr td').removeClass('end-date');
+// 	};
+// 	$('body').on('click', '.some-class td', function() {
+// 		console.log('hi');
+//  })
+// });
