@@ -1025,6 +1025,7 @@ body.open {
 	cursor: pointer;
 }
 
+
 .activities__form-block .radio {
 	margin: 5px 0 0 10px;
 	display: none;
@@ -1084,6 +1085,9 @@ body.open {
 	font-size: 14px;
 }
 
+.advanced-form__row-wrap .activities__radio label.margin-label {
+	margin-right: 0;
+}
 .advanced-form__row-wrap .radio-custom {
 	width: 16px;
 	height: 16px;
@@ -1092,6 +1096,7 @@ body.open {
 .advanced-form__row-wrap .radio-custom {
 	padding-top: 0;
 	margin-right: 10px;
+	flex: none;
 }
 
 .advanced-form__row-wrap .radio:checked + .radio-custom::before {
@@ -5150,6 +5155,7 @@ body.open {
 }
 
 .custom-calendar .calendars-nav {
+	position: relative;
 	background-color: #fff;
 }
 
@@ -5229,13 +5235,28 @@ body.open {
 
 .calendars-cmd.calendars-cmd-prev, 
 .calendars-cmd.calendars-cmd-next {
+	position: absolute;
 	color: #000;
 	font-family: 'Montserrat', sans-serif;
 
+}
+
+.calendars-cmd.calendars-cmd-prev {
+	top: 0;
+	left: 10px;
+}
+
+.calendars-cmd.calendars-cmd-next {
+	top: 0;
+	right: 10px;
 }
 
 .calendars-cmd.calendars-cmd-prev:hover,
 .calendars-cmd.calendars-cmd-next:hover {
 	background-color: #fff;
 	
+}
+
+.calendars-cmd {
+	width: 50px !important;
 }

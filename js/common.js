@@ -227,6 +227,10 @@ $(function() {
 		 multiSelect: 2,
 		 dateFormat: 'dd.mm.yyyy ',
 		 pickerClass: 'custom-calendar',
+		 showAnim: 'fadeIn',
+		 changeMonth: false,
+		 prevText: '<i class="fas fa-angle-left"></i>',
+		 nextText: '<i class="fas fa-angle-right"></i>',
 		 onShow: function(dates) {
 
 			var html =  '<div class="datepicker-heder">' +
@@ -305,51 +309,5 @@ $(function() {
 
 $('body').on('change', '.js-daterange-checkbox', function(){
 		$('.hide-span').toggleClass('active');
+		$('#configPicker').calendarsPicker('hide');
 });
-
-	
-
-// $(function() {
-// 	var today = new Date();
-// 	var startDate;
-// 	if ($('.js-daterange-menu').length) {
-// 		$('.js-daterange-menu').daterangepicker({
-// 			autoApply: true,
-// 		  	locale: {
-// 		    	defaultDate: today,
-// 		    	format: 'DD.MM.YYYY',
-// 		    	maxDate: 1
-// 		    }
-// 		}, function(start, end, label) {
-// 			console.log(this.container);
-// 		});
-// 	}
-// 	var daterangeMenu = $('.js-daterange-menu');
-//   		daterangeMenu.on('show.daterangepicker', function(ev, picker) {
-// 	var html =  '<div class="datepicker-heder">' +
-// 					'<span>Выбирите, когда Вам удобно выехать</span> ' +
-// 					'<label class="checkbox">' +
-// 						'<input class="checkbox__input js-daterange-checkbox" type="checkbox">' +
-// 						'<span class="checkbox__custom"></span>' +
-// 						'<span class="plus-minus">' +
-// 							'<i class="fas fa-plus"></i>' +
-// 							'<i class="fas fa-minus"></i>' +
-// 						'</span>' +
-// 						'3 дня (гибкие даты)' +
-// 					'</label>' +
-// 				'</div>';
-// 	startDate = picker.startDate._d;
-// 	var container = $(picker.container);
-// 		if (!container.hasClass('some-class')) {
-// 			container.prepend(html);	
-// 			container.addClass('some-class');
-// 		} else {
-// 			// console.log(picker);
-// 		}
-//   });
-// $('body').on('change', '.js-daterange-checkbox', function() {
-// 	daterangeMenu.data('daterangepicker').setEndDate(startDate);
-// 	$("body").on("apply.daterangepicker"); 
-
-	
-// })

@@ -799,6 +799,11 @@ Version:	1.0
 .calc-popap {
 	display: none;
 }
+
+
+.datepicker-heder {
+	justify-content: center;
+}
 }
 /*Mobile Screen*/
 
